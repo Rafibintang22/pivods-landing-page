@@ -72,10 +72,17 @@ function Nav() {
             {/* Dark/Light + Language */}
             <div className="flex items-center space-x-3">
                 <Button
-                    onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                    onClick={() => setTheme(theme === "light" ? "dark" : "light")}
                     className="w-[2rem] h-[2rem] flex items-center justify-center border border-gray-400 dark:border-gray-600 rounded-full text-xs hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                 >
-                    {theme && <FontAwesomeIcon icon={theme === "dark" ? faMoon : faSun} />}
+                    <FontAwesomeIcon
+                        icon={faSun}
+                        className="absolute h-full w-full rotate-0 scale-100 dark:-rotate-90 dark:scale-0"
+                    />
+                    <FontAwesomeIcon
+                        icon={faMoon}
+                        className="absolute h-full w-full rotate-90 scale-0 dark:-rotate-0 dark:scale-100"
+                    />
                 </Button>
 
                 <div className="hidden md:flex items-center space-x-2">

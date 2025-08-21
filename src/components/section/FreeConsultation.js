@@ -5,7 +5,7 @@ import { BackgroundGradient } from "../ui/background-gradient";
 
 export default function FreeConsultation() {
     return (
-        <section id="FreeConsultation" className="mt-24 py-24">
+        <section id="FreeConsultation" className="mt-24 py-12 lg:py-24">
             <div className="container">
                 <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-white dark:bg-zinc-900">
                     <div className="flex gap-8 w-full flex-wrap md:flex-nowrap">

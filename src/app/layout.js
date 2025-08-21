@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
                     sizes="<generated>"
                 />
             </head>
-            <body className={`${montserrat.variable} antialiased bg-white dark:bg-black`}>
+            <body className={`${montserrat.variable} antialiased bg-foreground dark:bg-background`}>
                 <Providers>{children}</Providers>
             </body>
         </html>
