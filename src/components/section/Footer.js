@@ -116,8 +116,8 @@ export default function Footer() {
                 </div>
 
                 {/* Bottom Section */}
-                <div className="mt-10 border-t border-gray-700 pt-6 flex flex-col md:flex-row items-center justify-between text-xs">
-                    <div className="hidden md:flex space-x-8">
+                <div className="mt-10 border-t border-gray-700 pt-6 flex flex-col gap-3 lg:flex-row items-center justify-between text-xs">
+                    <div className="flex space-x-8">
                         {menu.map((item, i) => (
                             <div key={i} className="relative group cursor-pointer">
                                 <a
