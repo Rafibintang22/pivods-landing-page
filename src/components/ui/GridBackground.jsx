@@ -12,7 +12,7 @@ export function GridBackground({ children, className, ...props }) {
     return (
         <div className="absolute h-screen w-full" onMouseMove={handleMouseMove} {...props}>
             {/* Grid dengan warna mengikuti cursor */}
-            {/* <div
+            <div
                 className={cn("absolute inset-0 -z-10", "[background-size:40px_40px]")}
                 style={{
                     backgroundImage: `linear-gradient(to right, color-mix(in srgb, var(--primary) 30%, transparent) 1px, transparent 1px),
@@ -20,7 +20,7 @@ export function GridBackground({ children, className, ...props }) {
                     WebkitMaskImage: `radial-gradient(200px at ${mouse.x}px ${mouse.y}px, black 70%, transparent 100%)`,
                     maskImage: `radial-gradient(200px at ${mouse.x}px ${mouse.y}px, black 70%, transparent 100%)`,
                 }}
-            /> */}
+            />
 
             {/* Layer asli grid abu-abu supaya ada base */}
             {/* <div
