@@ -1,4 +1,3 @@
-// Home.jsx
 import Nav from "@/components/Nav";
 import About from "@/components/section/About";
 import Hero from "@/components/section/Hero";

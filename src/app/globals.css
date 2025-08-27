@@ -82,7 +82,7 @@ body {
 /* Scrollbar minimalis */
 ::-webkit-scrollbar {
     width: 6px; /* Lebar scrollbar */
-    height: 6px; /* Tinggi horizontal scrollbar */
+    height: 2px; /* Tinggi horizontal scrollbar */
 }
 
 ::-webkit-scrollbar-track {

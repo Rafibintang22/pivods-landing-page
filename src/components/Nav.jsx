@@ -6,12 +6,14 @@ import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faMoon, faSun, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { useTheme } from "next-themes";
+import { usePathname } from "next/navigation";
 
-function Nav() {
+function Nav({ className }) {
     const [isScrolled, setIsScrolled] = useState(false);
     const [activeLang, setActiveLang] = useState("EN");
     const { theme, setTheme } = useTheme();
     const [menuOpen, setMenuOpen] = useState(false);
+    const pathname = usePathname();
 
     useEffect(() => {
         const handleScroll = () => setIsScrolled(window.scrollY > 0);
@@ -20,8 +22,8 @@ function Nav() {
     }, []);
 
     const menu = [
-        { name: "Home", href: "#" },
-        { name: "About", href: "/testdark" },
+        { name: "Home", href: "/" },
+        { name: "About", href: "/about" },
         { name: "Services", href: "#" },
         { name: "Portofolio", href: "#" },
         { name: "Blog", href: "#" },
@@ -32,9 +34,9 @@ function Nav() {
             className={`fixed top-0 left-0 z-50 flex justify-between items-center mx-auto px-[15px] lg:px-[90px] py-6 w-full transition-colors duration-300
             ${
                 isScrolled
-                    ? "bg-white text-gray-900 dark:bg-black/50 dark:text-gray-100 dark:backdrop-blur-md"
+                    ? "bg-white text-gray-900 dark:bg-black/50 dark:text-gray-100 dark:backdrop-blur-md shadow"
                     : "bg-transparent text-gray-900 dark:text-gray-100"
-            }`}
+            } ${className}`}
         >
             <Link href="/" passHref>
                 <Image
@@ -48,25 +50,32 @@ function Nav() {
             </Link>
 
             <div className="hidden md:flex space-x-8 uppercase">
-                {menu.map((item, i) => (
-                    <div key={i} className="relative group cursor-pointer">
-                        <a
-                            href={item.href}
-                            className="text-gray-800 dark:text-gray-300 transition-colors duration-300 group-hover:text-black dark:group-hover:text-white"
-                        >
-                            {item.name}
-                        </a>
-                        <span
-                            className="
+                {menu.map((item, i) => {
+                    const isActive = pathname === item.href;
+                    return (
+                        <div key={i} className="relative group cursor-pointer">
+                            <a
+                                href={item.href}
+                                className={`transition-colors duration-300 font-medium ${
+                                    isActive
+                                        ? "text-black dark:text-white group-hover:text-black dark:group-hover:text-white"
+                                        : "text-gray-800 dark:text-gray-500 group-hover:text-black dark:group-hover:text-white"
+                                }`}
+                            >
+                                {item.name}
+                            </a>
+                            <span
+                                className="
                             absolute left-0 -bottom-1 h-[1px] w-full
                             bg-black dark:bg-white
                             scale-x-0 group-hover:scale-x-100
                             origin-right group-hover:origin-left
                             transition-transform duration-300
                             "
-                        />
-                    </div>
-                ))}
+                            />
+                        </div>
+                    );
+                })}
             </div>
 
             {/* Dark/Light + Language */}
