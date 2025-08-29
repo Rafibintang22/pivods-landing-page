@@ -1,7 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-import Nav from "@/components/Nav";
-import WhatsAppButton from "@/components/WhatsAppButton";
+import { Nav, WhatsAppButton } from "@/components/global";
 import Image from "next/image";
 
 export default function About() {
