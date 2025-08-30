@@ -9,7 +9,7 @@ export default function Hero() {
         <section id="Hero" className="relative min-h-screen text-center">
             <Spotlight />
             <GridBackground>
-                <div className="relative flex flex-col items-center justify-center w-full top-48 md:top-64">
+                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[50%] flex flex-col items-center justify-center w-full">
                     <span className="bg-primary/20 text-primary px-4 py-1 rounded-full text-sm mb-4 backdrop-blur-md border border-gray-300 dark:border-gray-700">
                         🚀 Empowering Innovation
                     </span>

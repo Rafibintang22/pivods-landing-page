@@ -7,7 +7,7 @@ export default function FreeConsultation() {
     return (
         <section id="FreeConsultation" className="mt-24 py-12 lg:py-24">
             <div className="container">
-                <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-white dark:bg-zinc-900">
+                <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-white dark:bg-zinc-900/90 backdrop-blur-md">
                     <div className="flex gap-8 w-full flex-wrap md:flex-nowrap">
                         {/* Left content */}
                         <div className="w-full lg:w-5/12">
@@ -51,7 +51,7 @@ export default function FreeConsultation() {
                                             type="text"
                                             name="name"
                                             maxLength={100}
-                                            className="w-full rounded-md border border-gray-300/40 dark:border-gray-600/40 bg-white/50 dark:bg-gray-800/50 backdrop-blur-md px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
+                                            className="w-full rounded-md border border-gray-300/40 dark:border-gray-600/40 bg-white/50 dark:bg-gray-800/20 backdrop-blur-md px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
                                             required
                                         />
                                     </div>
@@ -68,7 +68,7 @@ export default function FreeConsultation() {
                                             type="email"
                                             name="email"
                                             maxLength={200}
-                                            className="w-full rounded-md border border-gray-300/40 dark:border-gray-600/40 bg-white/50 dark:bg-gray-800/50 backdrop-blur-md px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
+                                            className="w-full rounded-md border border-gray-300/40 dark:border-gray-600/40 bg-white/50 dark:bg-gray-800/20 backdrop-blur-md px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
                                             required
                                         />
                                     </div>
@@ -85,7 +85,7 @@ export default function FreeConsultation() {
                                             type="tel"
                                             name="phone"
                                             maxLength={20}
-                                            className="w-full rounded-md border border-gray-300/40 dark:border-gray-600/40 bg-white/50 dark:bg-gray-800/50 backdrop-blur-md px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
+                                            className="w-full rounded-md border border-gray-300/40 dark:border-gray-600/40 bg-white/50 dark:bg-gray-800/20 backdrop-blur-md px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
                                             required
                                         />
                                     </div>
@@ -102,7 +102,7 @@ export default function FreeConsultation() {
                                             type="text"
                                             name="company"
                                             maxLength={150}
-                                            className="w-full rounded-md border border-gray-300/40 dark:border-gray-600/40 bg-white/50 dark:bg-gray-800/50 backdrop-blur-md px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
+                                            className="w-full rounded-md border border-gray-300/40 dark:border-gray-600/40 bg-white/50 dark:bg-gray-800/20 backdrop-blur-md px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
                                             required
                                         />
                                     </div>
@@ -120,7 +120,7 @@ export default function FreeConsultation() {
                                         name="message"
                                         rows={4}
                                         maxLength={500}
-                                        className="w-full rounded-md border border-gray-300/40 dark:border-gray-600/40 bg-white/50 dark:bg-gray-800/50 backdrop-blur-md px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
+                                        className="w-full rounded-md border border-gray-300/40 dark:border-gray-600/40 bg-white/50 dark:bg-gray-800/20 backdrop-blur-md px-3 py-2 text-xs focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary"
                                         required
                                     />
                                 </div>

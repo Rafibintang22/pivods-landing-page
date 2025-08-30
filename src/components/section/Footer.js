@@ -19,7 +19,7 @@ export default function Footer() {
         { name: "Blog", href: "#" },
     ];
     return (
-        <footer className="bg-gradient-to-b from-black to-zinc-900  text-gray-300 py-12">
+        <footer className="bg-gradient-to-b from-background to-primary/20  text-gray-300 py-12">
             <div className="container">
                 {/* Top Section */}
                 <div className="flex flex-col items-center text-center space-y-6">
