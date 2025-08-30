@@ -48,14 +48,22 @@ export default function Services() {
 			<div className={layoutStyles.container}>
 				<div className="text-center">
 					<div className="sticky top-0 right-0 left-0 z-10 max-w-3xl mx-auto text-center w-full">
-						<h2 className="text-4xl font-bold mb-6 text-black dark:text-white">
-							Our <span className="text-primary">Services</span>
+						<span className="bg-primary/20 text-primary h-fit px-4 py-1 rounded-full text-[15px] backdrop-blur-md">
+							Our Services
+						</span>
+						<h2 className="text-4xl font-bold my-6 text-black dark:text-white">
+							We Make Technology
+							<span className="text-primary">
+								{" "}
+								That Drives Growth
+							</span>
 						</h2>
+
 						<p className="text-gray-500 dark:text-gray-400 leading-relaxed">
-							Pivods also known as Pioneer Inovasi Digital is a
-							software house product. Founded in 2022, we have
-							successfully delivered over 150 projects across
-							various sectors, helping
+							Transform your business with technology that solves
+							real challenges and drives measurable growth. From
+							smart websites to IoT, AI, and automation — get
+							solutions that help you scale faster.
 						</p>
 					</div>
 				</div>

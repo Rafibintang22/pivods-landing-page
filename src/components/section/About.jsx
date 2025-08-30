@@ -1,60 +1,101 @@
 "use client";
 
-import { ThreeDMarquee } from "../ui/3d-marquee";
-import { BackgroundBeamsWithCollision } from "../ui/backgrounds-beams-with-collision";
-
+import { layoutStyles } from "@/app/style";
+import Image from "next/image";
 export default function About() {
-    const images = [
-        "https://assets.aceternity.com/cloudinary_bkp/3d-card.png",
-        "https://assets.aceternity.com/animated-modal.png",
-        "https://assets.aceternity.com/animated-testimonials.webp",
-        "https://assets.aceternity.com/cloudinary_bkp/Tooltip_luwy44.png",
-        "https://assets.aceternity.com/github-globe.png",
-        "https://assets.aceternity.com/glare-card.png",
-        "https://assets.aceternity.com/layout-grid.png",
-        "https://assets.aceternity.com/flip-text.png",
-        "https://assets.aceternity.com/hero-highlight.png",
-        "https://assets.aceternity.com/carousel.webp",
-        "https://assets.aceternity.com/placeholders-and-vanish-input.png",
-        "https://assets.aceternity.com/shooting-stars-and-stars-background.png",
-        "https://assets.aceternity.com/signup-form.png",
-        "https://assets.aceternity.com/cloudinary_bkp/stars_sxle3d.png",
-        "https://assets.aceternity.com/spotlight-new.webp",
-        "https://assets.aceternity.com/cloudinary_bkp/Spotlight_ar5jpr.png",
-        "https://assets.aceternity.com/cloudinary_bkp/Parallax_Scroll_pzlatw_anfkh7.png",
-        "https://assets.aceternity.com/tabs.png",
-        "https://assets.aceternity.com/cloudinary_bkp/Tracing_Beam_npujte.png",
-        "https://assets.aceternity.com/cloudinary_bkp/typewriter-effect.png",
-        "https://assets.aceternity.com/glowing-effect.webp",
-        "https://assets.aceternity.com/hover-border-gradient.png",
-        "https://assets.aceternity.com/cloudinary_bkp/Infinite_Moving_Cards_evhzur.png",
-        "https://assets.aceternity.com/cloudinary_bkp/Lamp_hlq3ln.png",
-        "https://assets.aceternity.com/macbook-scroll.png",
-        "https://assets.aceternity.com/cloudinary_bkp/Meteors_fye3ys.png",
-        "https://assets.aceternity.com/cloudinary_bkp/Moving_Border_yn78lv.png",
-        "https://assets.aceternity.com/multi-step-loader.png",
-        "https://assets.aceternity.com/vortex.png",
-        "https://assets.aceternity.com/wobble-card.png",
-        "https://assets.aceternity.com/world-map.webp",
-    ];
-    return (
-        <section
-            id="About"
-            className="relative min-h-screen w-full flex flex-col items-center justify-center text-center mt-24"
-        >
-            <BackgroundBeamsWithCollision>
-                <div className="absolute top-0 z-10 max-w-3xl mx-auto">
-                    <h2 className="text-4xl font-bold mb-6 text-black dark:text-white">
-                        About <span className="text-primary">Us</span>
-                    </h2>
-                    <p className="text-gray-500 dark:text-gray-400 leading-relaxed">
-                        Pivods also known as Pioneer Inovasi Digital is a software house product.
-                        Founded in 2022, we have successfully delivered over 150 projects across
-                        various sectors, helping
-                    </p>
-                </div>
-                <ThreeDMarquee images={images} />
-            </BackgroundBeamsWithCollision>
-        </section>
-    );
+	return (
+		<section
+			id="About"
+			className="relative w-full flex flex-col items-center justify-center text-center mt-20"
+		>
+			<div className=" mx-auto w-full">
+				<div
+					className={`${layoutStyles.container} w-full h-max flex gap-10`}
+				>
+					<div className="w-1/2 flex gap-10 relative">
+						<div className="absolute top-0 left-0 w-[800px] h-[800px] rounded-full bg-primary/30 blur-[200px] -z-10"></div>
+
+						<div className="flex flex-col gap-2 items-center">
+							<div className="w-3 h-3 bg-white/80 rounded-full"></div>
+							<div className="w-[1px] h-full bg-white/80"></div>
+						</div>
+						<div className="w-full flex flex-col gap-y-5 items-start">
+							<span className="bg-primary/20 text-primary h-fit px-4 py-1 rounded-full text-[15px] backdrop-blur-md">
+								About Pivods
+							</span>
+							<h2 className="text-2xl md:text-4xl font-bold mb-6 text-left text-white dark:text-gray-100">
+								Your Partner in{" "}
+								<span className="text-primary">
+									Cutting-Edge Technologies
+								</span>
+							</h2>
+							<p className="text-gray-600 dark:text-gray-400 max-w-2xl mb-8 text-left">
+								For more than 3 years, Pivods part of PT
+								Jembatan Digital Inovatif has been building
+								powerful digital ecosystems for global clients.
+								From sleek landing pages and corporate websites
+								to advanced technologies like IoT, Machine
+								Learning, Big Data, and automation, we
+								specialize in creating solutions that move
+								businesses forward.
+								<br />
+								<br />
+								Our mission is simple: combine innovation and
+								reliability to deliver digital transformation
+								that matters turning ambitious visions into
+								sustainable impact.
+							</p>
+							<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+								<div className="text-center md:text-left">
+									<h2 className="text-3xl font-bold text-white">
+										150
+										<span className="text-primary-3">
+											+
+										</span>
+									</h2>
+									<p className="mt-2 text-white/60">
+										Projects Successfully Delivered
+									</p>
+								</div>
+								<div className="text-center md:text-left">
+									<h2 className="text-3xl font-bold text-white">
+										98
+										<span className="text-primary-3">
+											%
+										</span>
+									</h2>
+									<p className="mt-2 text-white/60">
+										Client Satisfaction Rate
+									</p>
+								</div>
+								<div className="text-center md:text-left">
+									<h2 className="text-3xl font-bold text-white">
+										15
+										<span className="text-primary-3">
+											+
+										</span>
+									</h2>
+									<p className="mt-2 text-white/60">
+										Global Business Partners
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div className="w-1/2 h-full pl-10 flex items-center justify-end text-black">
+						<div className="w-full h-[27rem] rounded-xl relative overflow-hidden border-none">
+							<div className=" top-0 left-0 w-full h-full bg-gradient-to-t from-transparent  absolute z-10"></div>
+							<Image
+								src={"/cuttingedge.jpg"}
+								alt={"Pivods cutting edge tech"}
+								className="object-cover object-center rounded-xl border-none opacity-80"
+								priority
+								fill
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	);
 }

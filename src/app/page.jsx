@@ -1,10 +1,11 @@
 import { Nav, WhatsAppButton } from "@/components/global";
 import {
-	About,
+	Portfolio,
 	Hero,
 	Services,
 	FreeConsultation,
 	Footer,
+	About,
 } from "@/components/section/";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
 				<Hero />
 				<About />
 				<Services />
+				<Portfolio />
 				<FreeConsultation />
 				<Footer />
 			</main>
