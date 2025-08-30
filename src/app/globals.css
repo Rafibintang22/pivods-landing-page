@@ -62,6 +62,16 @@
         }
     }
 }
+@keyframes marquee {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-50%); } /* geser separuh karena kita duplicate array */
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 20s linear infinite;
+}
 
 body {
     color: var(--foreground);

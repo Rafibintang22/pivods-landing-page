@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { Button } from "./button";
+import { Button } from "../button";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
