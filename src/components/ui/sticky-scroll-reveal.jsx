@@ -28,24 +28,53 @@ export const StickyScroll = ({ content, contentClassName }) => {
     });
 
     return (
-        <motion.div ref={containerRef} className="relative flex justify-between gap-5 mt-12">
-            <div className="max-w-2xl flex-1">
+        <motion.div
+            ref={containerRef}
+            className="relative flex flex-col lg:flex-row justify-between gap-5 mt-12"
+        >
+            <div className="w-full lg:max-w-2xl flex-1">
                 {content.map((item, index) => (
-                    <div key={index} className={`${index !== content.length - 1 ? "mb-52" : ""}`}>
+                    <div
+                        key={index}
+                        className={`${index !== content.length - 1 ? "mb-20 lg:mb-52" : ""}`}
+                    >
                         <motion.h2
                             initial={{ opacity: 0 }}
                             animate={{ opacity: activeCard === index ? 1 : 0.3 }}
-                            className="text-xl font-bold text-slate-100"
+                            className="text-md md:text-xl font-bold text-slate-100"
                         >
                             {item.title}
                         </motion.h2>
                         <motion.p
                             initial={{ opacity: 0 }}
                             animate={{ opacity: activeCard === index ? 1 : 0.3 }}
-                            className="text-kg mt-3 max-w-sm text-slate-300"
+                            className="text-xs mt-3 max-w-full md:max-w-sm text-slate-300 leading-relaxed"
                         >
                             {item.description}
                         </motion.p>
+
+                        {/* Sticky Card for mobile/tablet */}
+                        <div className="mt-6 block lg:hidden">
+                            <div className="relative rounded-xl border p-2 md:rounded-3xl md:p-4">
+                                <GlowingEffect
+                                    blur={0}
+                                    borderWidth={3}
+                                    spread={80}
+                                    glow={true}
+                                    disabled={false}
+                                    proximity={64}
+                                    inactiveZone={0.01}
+                                />
+                                <div className="bg-white/10 backdrop-blur-[2px] relative flex flex-col gap-6 overflow-hidden rounded-3xl p-4 md:p-6 dark:shadow-[0px_0px_27px_0px_#2D2D2D]">
+                                    <div className="w-fit rounded-lg border border-gray-600 p-2">
+                                        <FontAwesomeIcon icon={faPeace} />
+                                    </div>
+                                    <h2 className="text-sm md:text-base dark:text-neutral-400 [&_b]:font-semibold [&_strong]:font-semibold">
+                                        {item.content ?? null}
+                                    </h2>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 ))}
             </div>
@@ -71,7 +100,7 @@ export const StickyScroll = ({ content, contentClassName }) => {
                                     <FontAwesomeIcon icon={faPeace} />
                                 </div>
                                 <div className="space-y-3">
-                                    <h2 className="font-sans text-sm/[1.125rem] text-black md:text-base/[1.375rem] dark:text-neutral-400 [&_b]:md:font-semibold [&_strong]:md:font-semibold">
+                                    <h2 className="text-sm/[1.125rem] text-black md:text-base/[1.375rem] dark:text-neutral-400 [&_b]:md:font-semibold [&_strong]:md:font-semibold">
                                         {content[activeCard].content ?? null}
                                     </h2>
                                 </div>

@@ -1,12 +1,12 @@
 "use client";
 import Link from "next/link";
-import { Button } from "../button";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faMoon, faSun, faTimes } from "@fortawesome/free-solid-svg-icons";
 import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
+import { Button } from ".";
 
 function Nav({ className }) {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -26,7 +26,7 @@ function Nav({ className }) {
         { name: "About", href: "/about" },
         { name: "Services", href: "#" },
         { name: "Portofolio", href: "#" },
-        { name: "Blog", href: "#" },
+        { name: "Blog", href: "/blog" },
     ];
 
     return (

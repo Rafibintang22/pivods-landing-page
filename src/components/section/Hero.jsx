@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/components/button";
+import { Button } from "@/components/global";
 import { GridBackground } from "@/components/ui/GridBackground";
 import { Spotlight } from "@/components/ui/Spotlight";
 import ScrollDownIcon from "../ui/ScrollDownIcon";
@@ -9,85 +9,68 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 export default function Hero() {
-	return (
-		<section id="Hero" className="relative min-h-screen text-center">
-			<Spotlight />
-			<GridBackground>
-				<div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[80%] flex flex-col items-center justify-center w-full">
-					<span className="bg-primary/20 text-primary px-4 py-1 rounded-full text-sm mb-4 backdrop-blur-md border border-gray-300 dark:border-gray-700">
-						🚀 Empowering Innovation
-					</span>
+    return (
+        <section id="Hero" className="relative min-h-screen text-center">
+            <Spotlight />
+            <GridBackground>
+                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[80%] flex flex-col items-center justify-center w-full">
+                    <span className="bg-primary/20 text-primary px-4 py-1 rounded-full text-sm mb-4 backdrop-blur-md border border-gray-300 dark:border-gray-700">
+                        🚀 Empowering Innovation
+                    </span>
 
-					<h1 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-gray-100">
-						We Help <span className="text-primary">Thrive</span>
-						<br className="hidden md:block" />
-						Through Digital Transformation
-					</h1>
+                    <h1 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-gray-100">
+                        We Help <span className="text-primary">Thrive</span>
+                        <br className="hidden md:block" />
+                        Through Digital Transformation
+                    </h1>
 
-					<p className="text-gray-600 dark:text-gray-400 max-w-2xl mb-8 text-center">
-						Ready to thrive in digital transformation? Let’s turn
-						your vision into impactful digital experiences.
-					</p>
+                    <p className="text-gray-600 dark:text-gray-400 max-w-2xl mb-8 text-center">
+                        Ready to thrive in digital transformation? Let’s turn your vision into
+                        impactful digital experiences.
+                    </p>
 
-					<Button
-						onClick={() => {
-							document
-								.getElementById("FreeConsultation")
-								?.scrollIntoView({
-									behavior: "smooth",
-								});
-						}}
-						className="px-6 py-3 rounded-xl bg-primary hover:bg-primary/80 text-white shadow-lg transition"
-					>
-						Contact Us
-					</Button>
-				</div>
+                    <Button
+                        onClick={() => {
+                            document.getElementById("FreeConsultation")?.scrollIntoView({
+                                behavior: "smooth",
+                            });
+                        }}
+                        className="px-6 py-3 rounded-xl bg-primary hover:bg-primary/80 text-white shadow-lg transition"
+                    >
+                        Contact Us
+                    </Button>
+                </div>
 
-				<ScrollDownIcon />
-				<div className="absolute bottom-16 left-0 w-full overflow-hidden">
-					<div className="flex items-center gap-1 w-full justify-center">
-						<FontAwesomeIcon
-							icon={faStar}
-							className="text-yellow-400"
-						/>
-						<FontAwesomeIcon
-							icon={faStar}
-							className="text-yellow-400"
-						/>
-						<FontAwesomeIcon
-							icon={faStar}
-							className="text-yellow-400"
-						/>
-						<FontAwesomeIcon
-							icon={faStar}
-							className="text-yellow-400"
-						/>
-						<FontAwesomeIcon
-							icon={faStar}
-							className="text-yellow-400"
-						/>
-					</div>
-					<p className="text-gray-600 mt-3 dark:text-gray-400 text-center">
-						Trusted by over 100 companies and organizations
-					</p>
-					<div className="flex items-center gap-x-10 mt-1 max-md:gap-x-5 animate-marquee">
-						{clients.concat(clients).map((client, index) => (
-							<div
-								key={index}
-								className="w-28 h-28 max-md:w-20 max-md:h-20 relative opacity-40 flex-shrink-0"
-							>
-								<Image
-									src={client.logo}
-									alt={client.alt}
-									className="object-contain"
-									priority
-									fill
-								/>
-							</div>
-						))}
-					</div>
-				</div>
-			</GridBackground>
-		</section>
-	);
+                <ScrollDownIcon />
+                <div className="absolute bottom-16 left-0 w-full overflow-hidden">
+                    <div className="flex items-center gap-1 w-full justify-center">
+                        <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
+                        <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
+                        <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
+                        <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
+                        <FontAwesomeIcon icon={faStar} className="text-yellow-400" />
+                    </div>
+                    <p className="text-gray-600 mt-3 dark:text-gray-400 text-center">
+                        Trusted by over 100 companies and organizations
+                    </p>
+                    <div className="flex items-center gap-x-10 mt-1 max-md:gap-x-5 animate-marquee">
+                        {clients.concat(clients).map((client, index) => (
+                            <div
+                                key={index}
+                                className="w-28 h-28 max-md:w-20 max-md:h-20 relative opacity-40 flex-shrink-0"
+                            >
+                                <Image
+                                    src={client.logo}
+                                    alt={client.alt}
+                                    className="object-contain"
+                                    priority
+                                    fill
+                                />
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </GridBackground>
+        </section>
+    );
 }
