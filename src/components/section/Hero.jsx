@@ -19,23 +19,24 @@ export default function Hero() {
 					</span>
 
 					<h1 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-gray-100">
-						We Help <span className="text-primary">Thrive</span>
+						Transform Ideas Into{" "}
+						<span className="text-primary">Impact</span>
 						<br className="hidden md:block" />
-						Through Digital Transformation
+						With Next-Gen Digital Solutions
 					</h1>
 
 					<p className="text-gray-600 dark:text-gray-400 max-w-2xl mb-8 text-center">
-						Ready to thrive in digital transformation? Let’s turn
-						your vision into impactful digital experiences.
+						From startups to enterprises, we craft scalable
+						solutions that unlock growth — blending creativity,
+						technology, and strategy to help you lead in the digital
+						era.
 					</p>
 
 					<Button
 						onClick={() => {
 							document
 								.getElementById("FreeConsultation")
-								?.scrollIntoView({
-									behavior: "smooth",
-								});
+								?.scrollIntoView({ behavior: "smooth" });
 						}}
 						className="px-6 py-3 rounded-xl bg-primary hover:bg-primary/80 text-white shadow-lg transition"
 					>

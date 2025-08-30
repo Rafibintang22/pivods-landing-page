@@ -1,7 +1,7 @@
-import About from "./About";
+import Portfolio from "./Portfolio";
 import Footer from "./Footer";
 import FreeConsultation from "./FreeConsultation";
 import Hero from "./Hero";
 import Services from "./Services";
-
-export { About, Footer, FreeConsultation, Hero, Services }
+import About from "./About";
+export { Portfolio, Footer, FreeConsultation, Hero, About, Services }

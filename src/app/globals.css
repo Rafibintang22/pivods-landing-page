@@ -5,6 +5,7 @@
     --foreground: #ffffff;
     --primary: #00aaad;
     --secondary: #20a879;
+    --bgnew: #00090a;
 
     --font-sans: "Montserrat", sans-serif;
     /* Typography scale (Golden Ratio from 12px) */
@@ -21,6 +22,7 @@
     --color-foreground: var(--foreground);
     --color-primary: var(--primary);
     --color-secondary: var(--secondary);
+    --color-bgnew: var(--bgnew);
     --font-sans: "Montserrat", sans-serif;
 
     /* Font sizes */
