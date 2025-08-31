@@ -54,7 +54,7 @@ function Nav({ className }) {
                     const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
                     return (
                         <div key={i} className="relative group cursor-pointer">
-                            <a
+                            <Link
                                 href={item.href}
                                 className={`transition-colors duration-300 font-medium ${
                                     isActive
@@ -63,7 +63,7 @@ function Nav({ className }) {
                                 }`}
                             >
                                 {item.name}
-                            </a>
+                            </Link>
                             <span
                                 className="
                             absolute left-0 -bottom-1 h-[1px] w-full
