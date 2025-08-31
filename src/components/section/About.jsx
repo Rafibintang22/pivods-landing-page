@@ -10,12 +10,12 @@ export default function About() {
 		>
 			<div className=" mx-auto w-full">
 				<div
-					className={`${layoutStyles.container} w-full h-max flex gap-10`}
+					className={`${layoutStyles.container} w-full h-max flex gap-10 max-lg:flex-col-reverse`}
 				>
-					<div className="w-1/2 flex gap-10 relative">
+					<div className="w-1/2 max-lg:w-full flex gap-10 relative">
 						<div className="absolute top-0 left-0 w-[800px] h-[800px] rounded-full bg-primary/30 blur-[200px] -z-10"></div>
 
-						<div className="flex flex-col gap-2 items-center">
+						<div className="flex flex-col gap-2 items-center max-md:hidden">
 							<div className="w-3 h-3 bg-white/80 rounded-full"></div>
 							<div className="w-[1px] h-full bg-white/80"></div>
 						</div>
@@ -23,7 +23,7 @@ export default function About() {
 							<span className="bg-primary/20 text-primary h-fit px-4 py-1 rounded-full text-[15px] backdrop-blur-md">
 								About Pivods
 							</span>
-							<h2 className="text-2xl md:text-4xl font-bold mb-6 text-left text-white dark:text-gray-100">
+							<h2 className="text-4xl max-md:text-md font-bold mb-6 text-left text-white dark:text-gray-100">
 								Your Partner in{" "}
 								<span className="text-primary">
 									Cutting-Edge Technologies
@@ -45,7 +45,7 @@ export default function About() {
 								that matters turning ambitious visions into
 								sustainable impact.
 							</p>
-							<div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+							<div className="grid grid-cols-2 md:grid-cols-3 gap-8">
 								<div className="text-center md:text-left">
 									<h2 className="text-3xl font-bold text-white">
 										150
@@ -82,7 +82,7 @@ export default function About() {
 							</div>
 						</div>
 					</div>
-					<div className="w-1/2 h-full pl-10 flex items-center justify-end text-black">
+					<div className="w-1/2 h-full max-lg:w-full pl-10 max-lg:pl-0 flex items-center justify-end text-black">
 						<div className="w-full h-[27rem] rounded-xl relative overflow-hidden border-none">
 							<div className=" top-0 left-0 w-full h-full bg-gradient-to-t from-transparent  absolute z-10"></div>
 							<Image

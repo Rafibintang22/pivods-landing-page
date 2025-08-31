@@ -1,9 +1,8 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import { useMotionValueEvent, useScroll, motion } from "motion/react";
 import { GlowingEffect } from "./glowing-effect";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPeace } from "@fortawesome/free-solid-svg-icons";
+
 import { Button } from "../global";
 import { ArrowUpRight } from "lucide-react";
 export const StickyScroll = ({ content, contentClassName }) => {
@@ -34,9 +33,9 @@ export const StickyScroll = ({ content, contentClassName }) => {
 	return (
 		<motion.div
 			ref={containerRef}
-			className="relative flex justify-between gap-5 mt-12"
+			className="relative flex justify-between gap-5 mt-12 max-lg:flex-col"
 		>
-			<div className="w-4/6 flex-1">
+			<div className="w-4/6 max-lg:w-full min-lg:flex-1">
 				{content.map((item, index) => (
 					<div
 						key={index}
@@ -44,6 +43,27 @@ export const StickyScroll = ({ content, contentClassName }) => {
 							index !== content.length - 1 ? "mb-52" : ""
 						} flex flex-col justify-center h-[30rem] `}
 					>
+						<div className="w-full relative min-lg:hidden">
+							<div className="absolute inset-0 bg-primary/50 blur-[200px] -z-10"></div>
+							<div
+								className={` block h-100 w-full  overflow-hidden list-none `}
+							>
+								<div className="relative h-full  p-1 md:p-2">
+									<GlowingEffect
+										blur={0}
+										borderWidth={3}
+										spread={80}
+										glow={true}
+										disabled={false}
+										proximity={64}
+										inactiveZone={0.01}
+									/>
+									<div className="w-[90%] h-full relative">
+										{item.content ?? null}
+									</div>
+								</div>
+							</div>
+						</div>
 						<span className="bg-primary/20 text-primary h-fit w-fit px-4 py-2 rounded-full text-[15px] backdrop-blur-md">
 							{item.title}
 						</span>
@@ -96,10 +116,10 @@ export const StickyScroll = ({ content, contentClassName }) => {
 				))}
 			</div>
 
-			<div className="sticky top-0 w-2/6 left-0">
+			<div className="sticky top-0 w-2/6 max-lg:hidden left-0">
 				<div className="absolute inset-0 bg-primary/50 blur-[200px] -z-10"></div>
 				<div
-					className={`mt-[48px] sticky top-52 hidden h-100 w-full lg:block overflow-hidden list-none ${contentClassName}`}
+					className={`mt-[48px] sticky top-52 block h-100 w-full  overflow-hidden list-none ${contentClassName}`}
 				>
 					<div className="relative h-full  p-1 md:p-2">
 						<GlowingEffect
