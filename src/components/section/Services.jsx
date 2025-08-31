@@ -261,9 +261,13 @@ export default function Services() {
 				},
 			],
 			content: (
-				<div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--teal-500),var(--cyan-500))] text-white">
-					IoT Development
-				</div>
+				<Image
+					src={"/services/iot-services.png"}
+					alt={"Pivods IoT Development Services"}
+					className="object-contain w-full z-20 object-center border-none "
+					priority
+					fill
+				/>
 			),
 		},
 		{

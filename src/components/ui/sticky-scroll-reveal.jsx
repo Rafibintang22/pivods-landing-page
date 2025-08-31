@@ -33,7 +33,7 @@ export const StickyScroll = ({ content, contentClassName }) => {
 	return (
 		<motion.div
 			ref={containerRef}
-			className="relative flex justify-between gap-5 mt-12 max-lg:flex-col"
+			className="relative flex justify-between gap-5 max-lg:mt-28 mt-12 max-lg:flex-col"
 		>
 			<div className="w-4/6 max-lg:w-full min-lg:flex-1">
 				{content.map((item, index) => (
@@ -41,14 +41,12 @@ export const StickyScroll = ({ content, contentClassName }) => {
 						key={index}
 						className={`${
 							index !== content.length - 1 ? "mb-52" : ""
-						} flex flex-col justify-center h-[30rem] `}
+						} flex flex-col justify-center h-[30rem] max-lg:h-[45rem] `}
 					>
 						<div className="w-full relative min-lg:hidden">
 							<div className="absolute inset-0 bg-primary/50 blur-[200px] -z-10"></div>
-							<div
-								className={` block h-100 w-full  overflow-hidden list-none `}
-							>
-								<div className="relative h-full  p-1 md:p-2">
+							<div className="block h-84 w-full overflow-hidden list-none items-center justify-center">
+								<div className="relative h-full p-1 md:p-2">
 									<GlowingEffect
 										blur={0}
 										borderWidth={3}
@@ -58,8 +56,10 @@ export const StickyScroll = ({ content, contentClassName }) => {
 										proximity={64}
 										inactiveZone={0.01}
 									/>
-									<div className="w-[90%] h-full relative">
-										{item.content ?? null}
+									<div className="w-full flex items-center justify-center">
+										<div className="w-3/4 relative h-[300px]">
+											{item.content ?? null}
+										</div>
 									</div>
 								</div>
 							</div>
