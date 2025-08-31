@@ -87,7 +87,7 @@ export default function About() {
                     /> */}
 
                     <div className="container flex flex-col items-center">
-                        <h1 className="text-3xl md:text-5xl font-bold mb-3 text-gray-900 dark:text-gray-100">
+                        <h1 className="text-3xl md:text-5xl font-bold mb-5 text-gray-900 dark:text-gray-100">
                             About
                         </h1>
                         <p className="font-semibold text-center">

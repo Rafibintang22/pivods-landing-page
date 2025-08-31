@@ -51,7 +51,7 @@ function Nav({ className }) {
 
             <div className="hidden md:flex space-x-8 uppercase">
                 {menu.map((item, i) => {
-                    const isActive = pathname === item.href;
+                    const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
                     return (
                         <div key={i} className="relative group cursor-pointer">
                             <a
