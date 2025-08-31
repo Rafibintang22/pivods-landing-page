@@ -75,19 +75,9 @@ export default function About() {
                         className="object-cover -z-10 opacity-20"
                         priority
                     />
-                    {/* <div
-                        className={cn(
-                            "absolute inset-0 -z-20",
-                            "[background-size:40px_40px] opacity-50"
-                        )}
-                        style={{
-                            backgroundImage: `linear-gradient(to right, color-mix(in srgb, var(--primary) 30%, transparent) 1px, transparent 1px),
-                          linear-gradient(to bottom, color-mix(in srgb, var(--primary) 30%, transparent) 1px, transparent 1px)`,
-                        }}
-                    /> */}
 
                     <div className="container flex flex-col items-center">
-                        <h1 className="text-3xl md:text-5xl font-bold mb-3 text-gray-900 dark:text-gray-100">
+                        <h1 className="text-3xl md:text-5xl font-bold mb-5 text-gray-900 dark:text-gray-100">
                             About
                         </h1>
                         <p className="font-semibold text-center">
