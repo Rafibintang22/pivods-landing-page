@@ -37,7 +37,7 @@ function BlogContent({ content }) {
                         return (
                             <h3
                                 key={index}
-                                className="text-xl font-semibold mt-8 mb-3 text-gray-800 dark:text-gray-200"
+                                className="text-md font-semibold mt-8 mb-3 text-gray-800 dark:text-gray-200"
                             >
                                 {block.text}
                             </h3>
@@ -59,7 +59,7 @@ function BlogContent({ content }) {
                         return (
                             <blockquote
                                 key={index}
-                                className="border-l-4 border-indigo-500 pl-4 italic text-gray-600 dark:text-gray-300 my-6"
+                                className="border-l-4 border-primary pl-4 italic text-gray-600 dark:text-gray-300 my-6"
                             >
                                 {block.text}
                             </blockquote>
@@ -99,7 +99,7 @@ function RelatedPosts({ currentId, category }) {
 
     return (
         <section className="bg-gray-50 dark:bg-background py-12 px-4">
-            <h2 className="text-xl md:text-md font-bold mb-5 text-center text-gray-900 dark:text-gray-100">
+            <h2 className="text-sm md:text-md font-bold mb-5 text-center text-gray-900 dark:text-gray-100">
                 Related Posts
             </h2>
             <div className="mx-auto grid max-w-7xl grid-cols-1 gap-4 md:auto-rows-[18rem] md:grid-cols-3">
