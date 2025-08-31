@@ -16,7 +16,7 @@
     --font-size-xl: 79px; /* 49 * 1.618 */
     --font-size-2xl: 128px; /* 79 * 1.618 */
 }
-
+ 
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
