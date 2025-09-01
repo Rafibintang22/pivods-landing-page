@@ -22,12 +22,12 @@ function Nav({ className }) {
     }, []);
 
     const menu = [
-        { name: "Home", href: "/" },
-        { name: "About", href: "/about" },
-        { name: "Services", href: "#" },
-        { name: "Portofolio", href: "#" },
-        { name: "Blog", href: "/blog" },
-    ];
+		{ name: "Home", href: "/" },
+		{ name: "About", href: "/about" },
+		{ name: "Services", href: "/services" },
+		{ name: "Portofolio", href: "#" },
+		{ name: "Blog", href: "/blog" },
+	];
 
     return (
 		<nav
