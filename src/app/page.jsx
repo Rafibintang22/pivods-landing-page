@@ -6,8 +6,9 @@ import {
 	FreeConsultation,
 	Footer,
 	About,
+	BusinessStruggle,
 } from "@/components/section/";
-
+import CtaBanner from "@/components/ui/cta-banner";
 export default function Home() {
 	return (
 		<>
@@ -15,6 +16,8 @@ export default function Home() {
 			<main>
 				<Hero />
 				<About />
+				<BusinessStruggle />
+				<CtaBanner />
 				<Services />
 				<Portfolio />
 				<FreeConsultation />

@@ -1,3 +1,3 @@
 export const layoutStyles = {
-    "container": "w-full px-[15px] mx-auto lg:px-[90px]"
+    "container": "w-full max-lg:px-[30px] px-[120px] min-3xl:px-[20rem]"
 }

@@ -33,6 +33,9 @@
     --text-xl: var(--font-size-xl);
     --text-2xl: var(--font-size-2xl);
 
+    /* Break Points */
+      --breakpoint-3xl: 1900px;
+
     --animate-aurora: aurora 60s linear infinite;
     @keyframes aurora {
         from {

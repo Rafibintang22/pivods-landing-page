@@ -264,7 +264,7 @@ export default function Services() {
 				<Image
 					src={"/services/iot-services.png"}
 					alt={"Pivods IoT Development Services"}
-					className="object-contain w-full z-20 object-center border-none "
+					className="object-contain w-full z-20 object-center border-none drop-shadow-[0_0_15px_#2b7475] "
 					priority
 					fill
 				/>
@@ -311,7 +311,7 @@ export default function Services() {
 				<Image
 					src={"/services/brain.png"}
 					alt={"Pivods Machine Learning Services"}
-					className="object-contain w-full z-20 object-center border-none "
+					className="object-contain w-full z-20 object-center border-none drop-shadow-[0_0_15px_#2b7475]"
 					priority
 					fill
 				/>
@@ -358,7 +358,7 @@ export default function Services() {
 				<Image
 					src={"/services/mobile.png"}
 					alt={"Pivods Mobile & Desktop Application Services"}
-					className="object-contain w-full z-20 object-center border-none "
+					className="object-contain w-full z-20 object-center border-none drop-shadow-[0_0_15px_#2b7475]"
 					priority
 					fill
 				/>
