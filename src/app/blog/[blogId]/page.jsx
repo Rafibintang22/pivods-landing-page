@@ -1,5 +1,6 @@
 "use client";
 
+import { layoutStyles } from "@/app/style";
 import { Footer } from "@/components/section";
 import { cn } from "@/lib/utils";
 import { blogData } from "@/mockupdata.js";
@@ -154,7 +155,9 @@ export default function BlogPostDetail({ params }) {
                     className="object-cover -z-10 opacity-20"
                     priority
                 />
-                <div className="container flex flex-col items-center relative z-10">
+                <div
+                    className={`${layoutStyles.container} flex flex-col items-center relative z-10`}
+                >
                     <span className="bg-primary/20 text-primary px-4 py-1 rounded-full text-xs mb-4 backdrop-blur-md border border-gray-300 dark:border-gray-700">
                         {blog.Category}
                     </span>

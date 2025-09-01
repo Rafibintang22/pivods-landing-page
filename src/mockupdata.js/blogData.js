@@ -1,7 +1,7 @@
 const blogData = [
     {
         Id: 1,
-        Category: "Insight",
+        category: "insights",
         title: "The Dawn of Innovation",
         description: "Explore the birth of groundbreaking ideas and inventions.",
         header: { src: "/blog/img1.jpg", alt: "The Dawn of Innovation-img" },
@@ -50,7 +50,7 @@ const blogData = [
     },
     {
         Id: 2,
-        Category: "Insight",
+        category: "insights",
         title: "The Digital Revolution",
         description: "Dive into the transformative power of technology.",
         header: { src: "/blog/img2.jpg", alt: "The Digital Revolution-img" },
@@ -84,7 +84,7 @@ const blogData = [
     },
     {
         Id: 3,
-        Category: "Insight",
+        category: "insights",
         title: "The Art of Design",
         description: "Discover the beauty of thoughtful and functional design.",
         header: { src: "/blog/img3.jpg", alt: "The Art of Design-img" },
@@ -114,7 +114,7 @@ const blogData = [
     },
     {
         Id: 4,
-        Category: "Insight",
+        category: "insights",
         title: "The Power of Communication",
         description: "Understand the impact of effective communication in our lives.",
         header: { src: "/blog/img4.jpg", alt: "The Power of Communication-img" },
@@ -139,7 +139,7 @@ const blogData = [
     },
     {
         Id: 5,
-        Category: "Insight",
+        category: "insights",
         title: "The Pursuit of Knowledge",
         description: "Join the quest for understanding and enlightenment.",
         header: { src: "/blog/img5.jpg", alt: "The Pursuit of Knowledge-img" },
@@ -164,7 +164,7 @@ const blogData = [
     },
     {
         Id: 6,
-        Category: "Insight",
+        category: "insights",
         title: "The Joy of Creation",
         description: "Experience the thrill of bringing ideas to life.",
         header: { src: "/blog/img6.jpg", alt: "The Joy of Creation-img" },
@@ -181,7 +181,32 @@ const blogData = [
     },
     {
         Id: 7,
-        Category: "Insight",
+        category: "insights",
+        title: "The Spirit of Adventure",
+        description: "Embark on exciting journeys and thrilling discoveries.",
+        header: { src: "/blog/img1.jpg", alt: "The Spirit of Adventure-img" },
+        content: [
+            {
+                type: "paragraph",
+                text: "Adventure fuels curiosity and growth. From space exploration to backpacking in remote lands, adventure challenges our limits and expands our perspective.",
+            },
+            {
+                type: "list",
+                items: [
+                    "Exploration of new frontiers like Mars",
+                    "Sustainable tourism to protect nature",
+                    "Personal growth through stepping out of comfort zones",
+                ],
+            },
+            {
+                type: "quote",
+                text: "“Life is either a daring adventure or nothing at all.” – Helen Keller",
+            },
+        ],
+    },
+    {
+        Id: 8,
+        category: "insights",
         title: "The Spirit of Adventure",
         description: "Embark on exciting journeys and thrilling discoveries.",
         header: { src: "/blog/img1.jpg", alt: "The Spirit of Adventure-img" },
