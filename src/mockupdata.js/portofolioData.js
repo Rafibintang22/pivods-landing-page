@@ -5,187 +5,167 @@ const portofolioData = [
         title: "Multilink Trans Indonesia",
         description:
             "A sleek and responsive company profile website built to strengthen brand presence and highlight corporate services.",
-        header: { src: "/portofolio/multilink-mockup.png", alt: "Company Profile Website" },
-        content: [
+        summary:
+            "A sleek and responsive company profile website built to strengthen brand presence and highlight corporate services.",
+        header: {
+            src: "/portofolio/multilink-mockup.png",
+            alt: "Multilink Company Profile Website",
+        },
+        details: [
             {
                 type: "paragraph",
                 text: "We developed a modern company profile website with a clean UI/UX that reflects the client’s brand values. The site is optimized for performance and accessibility, making it easier for potential clients to connect with Multilink Trans Indonesia.",
             },
             {
-                type: "heading",
-                text: "Summary",
-            },
-            {
                 type: "paragraph",
-                text: "The project aimed to provide Multilink Trans Indonesia with a digital presence that showcases their logistics services in a professional and modern way. The website highlights company achievements, services, and client testimonials.",
-            },
-            {
-                type: "heading",
-                text: "Technologies Used",
-            },
-            {
-                type: "list",
-                items: [
-                    "Next.js for server-side rendering and performance",
-                    "Tailwind CSS for responsive and modern styling",
-                    "Headless CMS (Strapi) for content management",
-                    "Vercel for deployment and hosting",
-                ],
+                text: "The website highlights company achievements, services, and client testimonials in a visually appealing and structured way.",
             },
         ],
+        button: { label: "Visit Site", link: "https://multilink.co.id" },
     },
+
     {
         Id: 2,
         category: { label: "Information System", value: "information-system" },
         title: "Flood Control Management System (SIPBANJA-2)",
         description:
-            "An integrated flood monitoring and control information system with GIS support.",
+            "An integrated flood monitoring and control information system with GIS support to improve disaster preparedness and response.",
+        summary:
+            "An integrated flood monitoring and control information system with GIS support to improve disaster preparedness and response.",
         header: {
             src: "/portofolio/sipbanja2-map-mockup.png",
             alt: "Flood Control Management Information System",
         },
-        content: [
+        details: [
             {
                 type: "paragraph",
-                text: "We built a flood control management system that combines geospatial visualization with real-time monitoring of water levels. The system supports decision-making for authorities by providing predictive analysis and automated alerts.",
-            },
-            {
-                type: "heading",
-                text: "Summary",
+                text: "We built a flood control management system that combines geospatial visualization with real-time monitoring of water levels.",
             },
             {
                 type: "paragraph",
-                text: "The system helps local governments and disaster management agencies to plan, monitor, and respond to potential flood events more effectively.",
-            },
-            {
-                type: "heading",
-                text: "Technologies Used",
-            },
-            {
-                type: "list",
-                items: [
-                    "Laravel for backend development",
-                    "PostgreSQL with PostGIS for spatial data management",
-                    "Leaflet.js for interactive maps",
-                    "Bootstrap for UI framework",
-                    "REST API for mobile and third-party integrations",
-                ],
+                text: "The system supports decision-making for authorities by providing predictive analysis, automated alerts, and comprehensive reporting features.",
             },
         ],
+        button: null,
     },
+
     {
         Id: 3,
         category: { label: "Mobile Application", value: "mobile-app" },
         title: "Flood Control Management System (SIPBANJA-1)",
-        description: "Mobile app for flood monitoring and community reporting system.",
+        description:
+            "A mobile app for flood monitoring and community reporting system, empowering citizens and field officers with real-time information.",
+        summary:
+            "A mobile app for flood monitoring and community reporting system, empowering citizens and field officers with real-time information.",
         header: {
             src: "/portofolio/sipbanja1-dash-mockup.png",
             alt: "Flood Control Mobile Application",
         },
-        content: [
+        details: [
             {
                 type: "paragraph",
                 text: "We designed and developed a mobile app version of the flood monitoring system to empower citizens and field officers to report real-time flood conditions and receive early warnings.",
             },
             {
-                type: "heading",
-                text: "Summary",
-            },
-            {
                 type: "paragraph",
                 text: "The mobile app extends the web-based SIPBANJA system by offering mobile-first usability for faster reporting and access to critical information.",
             },
-            {
-                type: "heading",
-                text: "Technologies Used",
-            },
-            {
-                type: "list",
-                items: [
-                    "React Native for cross-platform mobile app development",
-                    "Firebase for push notifications",
-                    "REST API for data integration",
-                    "Google Maps SDK for location-based services",
-                ],
-            },
         ],
+        button: null,
     },
+
     {
         Id: 4,
         category: { label: "Mobile Application", value: "mobile-app" },
         title: "Smart Apartments App",
-        description: "A smart living mobile application designed for Rusunami residents.",
+        description:
+            "A smart living mobile application designed for Rusunami residents, integrating digital services and IoT device control.",
+        summary:
+            "A smart living mobile application designed for Rusunami residents, integrating digital services and IoT device control.",
         header: {
             src: "/portofolio/srusun-app-dash-mockup.png",
             alt: "Smart Apartments Mobile App",
         },
-        content: [
+        details: [
             {
                 type: "paragraph",
                 text: "The Smart Apartments app provides residents with an all-in-one platform to manage their apartment living. It includes features such as online bill payments, maintenance requests, community announcements, and IoT device control.",
             },
             {
-                type: "heading",
-                text: "Summary",
-            },
-            {
                 type: "paragraph",
                 text: "The app is designed to improve convenience, security, and connectivity for residents by digitizing apartment services and integrating smart home devices.",
             },
-            {
-                type: "heading",
-                text: "Technologies Used",
-            },
-            {
-                type: "list",
-                items: [
-                    "Flutter for cross-platform mobile development",
-                    "Firebase Authentication for secure login",
-                    "IoT integration via MQTT protocol",
-                    "Node.js + Express backend API",
-                    "MongoDB for scalable data storage",
-                ],
-            },
         ],
+        button: null,
     },
+
     {
         Id: 5,
         category: { label: "Information System", value: "information-system" },
         title: "Rusunami File Management System",
         description:
-            "A document and file management system tailored for Rusunami residents and management.",
+            "A document and file management system tailored for Rusunami residents and administrators to digitize paperwork.",
+        summary:
+            "A document and file management system tailored for Rusunami residents and administrators to digitize paperwork.",
         header: {
             src: "/portofolio/jarrdin-member-mockup.png",
             alt: "Rusunami File Management System",
         },
-        content: [
+        details: [
             {
                 type: "paragraph",
                 text: "This system digitizes document management for Rusunami residents and administrators, allowing secure storage, retrieval, and sharing of important documents such as ownership certificates, payment receipts, and community regulations.",
             },
             {
-                type: "heading",
-                text: "Summary",
-            },
-            {
                 type: "paragraph",
                 text: "The solution streamlines administrative work and provides residents with easier access to their digital documents anytime, anywhere.",
             },
+        ],
+        button: null,
+    },
+
+    {
+        Id: 6,
+        category: { label: "IoT Development", value: "iot-dev" },
+        title: "Smart Integrated Scale System (KSIP Agro)",
+        description:
+            "An IoT-based smart weighing and receiving system integrated with Odoo ERP, improving efficiency, accuracy, and transparency.",
+        summary:
+            "An IoT-based smart weighing and receiving system integrated with Odoo ERP, improving efficiency, accuracy, and transparency.",
+        header: { src: "/portofolio/ksipagro.jpg", alt: "Smart Integrated Scale IoT System" },
+        details: [
             {
-                type: "heading",
-                text: "Technologies Used",
+                type: "paragraph",
+                text: "We developed the Smart Integrated Scale (SIS) for KSIP Agro, automating the weighing and receiving process by integrating digital scales, cameras, and ERP synchronization.",
             },
             {
-                type: "list",
-                items: [
-                    "Laravel for backend system",
-                    "MySQL for structured database storage",
-                    "Tailwind CSS for modern UI design",
-                    "JWT Authentication for secure access",
-                    "Cloud storage integration (AWS S3)",
-                ],
+                type: "paragraph",
+                text: "The system captures product weight and images, prints barcode labels, and updates Odoo ERP in real-time to reduce manual errors and ensure transparency with suppliers.",
             },
         ],
+        button: null,
+    },
+
+    {
+        Id: 7,
+        category: { label: "IoT Development", value: "iot-dev" },
+        title: "Safety Multipurpose Box",
+        description:
+            "A smart safety box with emergency tools, a public display, and multifunctional surveillance for public facilities.",
+        summary:
+            "A smart safety box with emergency tools, a public display, and multifunctional surveillance for public facilities.",
+        header: { src: "/portofolio/bandara.jpg", alt: "Safety Multipurpose Box" },
+        details: [
+            {
+                type: "paragraph",
+                text: "Developed for PT Angkasa Pura, the Safety Multipurpose Box integrates emergency response tools such as AEDs and gas masks with a Raspberry Pi-powered display for public information and advertising.",
+            },
+            {
+                type: "paragraph",
+                text: "The system includes surveillance integration with CCTV and real-time image processing to enhance safety management.",
+            },
+        ],
+        button: null,
     },
 ];
 

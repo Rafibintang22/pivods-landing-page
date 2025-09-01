@@ -4,10 +4,12 @@ import Image from "next/image";
 import { layoutStyles } from "../style";
 import { useState } from "react";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
-import portofolioData from "@/mockupdata.js/portofolioData";
+import { portofolioData } from "@/mockupdata.js";
 import { Pagination } from "@/components/global";
+import { useRouter } from "next/navigation";
 
 export default function Portofolio() {
+    const router = useRouter();
     const [currCategory, setCurrCategory] = useState("all");
     const [currentPage, setCurrentPage] = useState(1);
     const category = [
@@ -66,7 +68,9 @@ export default function Portofolio() {
                                             ? "text-black dark:text-white"
                                             : "text-gray-800 dark:text-gray-500 hover:text-black dark:hover:text-white border-gray-700 hover:border-white"
                                     }`}
-                                    onClick={() => setCurrCategory(item.value)}
+                                    onClick={() => {
+                                        setCurrCategory(item.value), setCurrentPage(1);
+                                    }}
                                 >
                                     {item.label}
                                 </div>
@@ -90,7 +94,7 @@ export default function Portofolio() {
                                         src={item.header.src}
                                         alt={item.header.alt}
                                         fill
-                                        className="object-cover opacity-60 hover:opacity-100 transition duration-500 ease-in-out transform hover:scale-150 hover:translate-y-10 hover:rotate-5"
+                                        className="object-cover opacity-100 lg:opacity-60 hover:opacity-100 transition duration-500 ease-in-out transform hover:scale-150 hover:translate-y-10 hover:rotate-5"
                                         priority
                                     />
                                 </div>
@@ -105,7 +109,7 @@ export default function Portofolio() {
                             }
                             button={true}
                             className={`cursor-pointer`}
-                            onClick={() => router.push(`/blog/${item.Id}`)}
+                            onClick={() => router.push(`/portofolio/${item.Id}`)}
                         />
                     ))}
                 </BentoGrid>
