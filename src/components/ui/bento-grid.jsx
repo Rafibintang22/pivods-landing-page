@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { Button } from "../global";
 
 export const BentoGrid = ({ className, children }) => {
     return (
@@ -13,7 +14,16 @@ export const BentoGrid = ({ className, children }) => {
     );
 };
 
-export const BentoGridItem = ({ className, title, description, header, icon, ...props }) => {
+export const BentoGridItem = ({
+    className,
+    title,
+    description,
+    header,
+    icon,
+    button = false,
+    textButton = "View more",
+    ...props
+}) => {
     return (
         <div
             className={cn(
@@ -31,6 +41,11 @@ export const BentoGridItem = ({ className, title, description, header, icon, ...
                 <div className="font-sans text-xs font-normal text-neutral-600 dark:text-neutral-300">
                     {description}
                 </div>
+                {button && (
+                    <Button className="w-full mt-5 md:w-auto px-6 py-2 rounded-md bg-primary text-white text-xs font-semibold shadow-md hover:shadow-lg hover:bg-primary/90 transition duration-300 ease-in-out">
+                        {textButton}
+                    </Button>
+                )}
             </div>
         </div>
     );

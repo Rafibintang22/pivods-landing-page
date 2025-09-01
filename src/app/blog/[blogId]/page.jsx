@@ -112,12 +112,12 @@ function RelatedPosts({ currentId, category }) {
                             "group/bento shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-neutral-200 bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none"
                         )}
                     >
-                        <div className="relative w-full h-50 md:h-full rounded-md">
+                        <div className="relative w-full h-50 md:h-full rounded-md overflow-hidden">
                             <Image
                                 src={post.header.src}
                                 alt={post.header.alt}
                                 fill
-                                className="object-cover opacity-60 hover:opacity-100 transition duration-300"
+                                className="object-cover opacity-60 hover:opacity-100 transition duration-500 ease-in-out transform hover:scale-110 hover:rotate-2"
                                 priority
                             />
                         </div>

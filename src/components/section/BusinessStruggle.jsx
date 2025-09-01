@@ -43,7 +43,7 @@ function BusinessStruggle() {
     return (
         <section
             id="Problems"
-            className="relative w-full flex flex-col items-center justify-center text-center mt-24"
+            className="relative w-full flex flex-col items-center justify-center text-center mt-24 pt-24"
         >
             <div className=" mx-auto w-full">
                 <div

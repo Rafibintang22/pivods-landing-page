@@ -124,7 +124,7 @@ export default function Blog() {
             </section>
 
             {/* Blog Grid */}
-            <section className="mb-24">
+            <section id="blog" className="mb-24">
                 {paginatedData.length > 0 ? (
                     <BentoGrid className={`${layoutStyles.container} bg-background mb-12`}>
                         {paginatedData.map((item, i) => (
@@ -133,12 +133,12 @@ export default function Blog() {
                                 title={item.title}
                                 description={item.description}
                                 header={
-                                    <div className="relative w-full h-50 md:h-full rounded-md">
+                                    <div className="relative w-full h-50 md:h-full rounded-md overflow-hidden">
                                         <Image
                                             src={item.header.src}
                                             alt={item.header.alt}
                                             fill
-                                            className="object-cover opacity-60 hover:opacity-100 transition duration-300"
+                                            className="object-cover opacity-60 hover:opacity-100 transition duration-500 ease-in-out transform hover:scale-110 hover:rotate-2"
                                             priority
                                         />
                                     </div>
@@ -159,7 +159,10 @@ export default function Blog() {
                     totalRows={totalRows}
                     rowsPerPage={rowsPerPage}
                     currentPage={currentPage}
-                    onPageChange={setCurrentPage}
+                    onPageChange={(page) => {
+                        setCurrentPage(page);
+                        document.getElementById("blog")?.scrollIntoView({ behavior: "smooth" });
+                    }}
                 />
             </section>
             <Footer />
