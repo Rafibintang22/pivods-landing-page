@@ -20,7 +20,7 @@ export default function About({ active = "", className = "", imgSize = "" }) {
 							<div className="w-[1px] h-full bg-white/80"></div>
 						</div>
 						<div className="w-full flex flex-col gap-y-5 items-start">
-							<span className="bg-primary/20 text-primary h-fit px-4 py-1 rounded-full text-[15px] backdrop-blur-md">
+							<span className="bg-primary/20 text-primary h-fit px-4 py-2 rounded-full text-[15px] backdrop-blur-md">
 								About Pivods
 							</span>
 							<h2 className="text-4xl max-md:text-md font-bold mb-6 text-left text-white dark:text-gray-100">
@@ -46,10 +46,10 @@ export default function About({ active = "", className = "", imgSize = "" }) {
 								sustainable impact.
 							</p>
 							{active !== "about" && (
-								<div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+								<div className="grid grid-cols-3 max-lg:gap-3 gap-8">
 									<div className="text-center md:text-left">
 										<h2 className="text-3xl font-bold text-white">
-											150
+											100
 											<span className="text-primary-3">
 												+
 											</span>
