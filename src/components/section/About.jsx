@@ -2,11 +2,11 @@
 
 import { layoutStyles } from "@/app/style";
 import Image from "next/image";
-export default function About() {
+export default function About({ active = "", className = "", imgSize = "" }) {
 	return (
 		<section
 			id="About"
-			className="relative w-full flex flex-col items-center justify-center text-center mt-20"
+			className={`relative w-full flex flex-col items-center justify-center text-center mt-20 ${className}`}
 		>
 			<div className=" mx-auto w-full">
 				<div
@@ -45,45 +45,49 @@ export default function About() {
 								that matters turning ambitious visions into
 								sustainable impact.
 							</p>
-							<div className="grid grid-cols-2 md:grid-cols-3 gap-8">
-								<div className="text-center md:text-left">
-									<h2 className="text-3xl font-bold text-white">
-										150
-										<span className="text-primary-3">
-											+
-										</span>
-									</h2>
-									<p className="mt-2 text-white/60">
-										Projects Successfully Delivered
-									</p>
+							{active !== "about" && (
+								<div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+									<div className="text-center md:text-left">
+										<h2 className="text-3xl font-bold text-white">
+											150
+											<span className="text-primary-3">
+												+
+											</span>
+										</h2>
+										<p className="mt-2 text-white/60">
+											Projects Successfully Delivered
+										</p>
+									</div>
+									<div className="text-center md:text-left">
+										<h2 className="text-3xl font-bold text-white">
+											98
+											<span className="text-primary-3">
+												%
+											</span>
+										</h2>
+										<p className="mt-2 text-white/60">
+											Client Satisfaction Rate
+										</p>
+									</div>
+									<div className="text-center md:text-left">
+										<h2 className="text-3xl font-bold text-white">
+											15
+											<span className="text-primary-3">
+												+
+											</span>
+										</h2>
+										<p className="mt-2 text-white/60">
+											Global Business Partners
+										</p>
+									</div>
 								</div>
-								<div className="text-center md:text-left">
-									<h2 className="text-3xl font-bold text-white">
-										98
-										<span className="text-primary-3">
-											%
-										</span>
-									</h2>
-									<p className="mt-2 text-white/60">
-										Client Satisfaction Rate
-									</p>
-								</div>
-								<div className="text-center md:text-left">
-									<h2 className="text-3xl font-bold text-white">
-										15
-										<span className="text-primary-3">
-											+
-										</span>
-									</h2>
-									<p className="mt-2 text-white/60">
-										Global Business Partners
-									</p>
-								</div>
-							</div>
+							)}
 						</div>
 					</div>
 					<div className="w-1/2 h-full max-lg:w-full pl-10 max-lg:pl-0 flex items-center justify-end text-black">
-						<div className="w-full h-[27rem] rounded-xl relative overflow-hidden border-none">
+						<div
+							className={`w-full h-[27rem] rounded-xl relative overflow-hidden border-none ${imgSize}`}
+						>
 							<div className=" top-0 left-0 w-full h-full bg-gradient-to-t from-transparent  absolute z-10"></div>
 							<Image
 								src={"/cuttingedge.jpg"}
