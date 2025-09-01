@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/text-reveal-card";
 import { Timeline } from "@/components/ui/timeline";
 import Footer from "@/components/section/Footer";
+import { layoutStyles } from "../style";
 
 export default function About() {
     const numberHistory = [
@@ -76,7 +77,7 @@ export default function About() {
                         priority
                     />
 
-                    <div className="container flex flex-col items-center">
+                    <div className={`${layoutStyles.container} flex flex-col items-center`}>
                         <h1 className="text-3xl md:text-5xl font-bold mb-5 text-gray-900 dark:text-gray-100">
                             About
                         </h1>
@@ -86,7 +87,7 @@ export default function About() {
                     </div>
                 </section>
                 <section className="bg-background min-h-max w-full">
-                    <div className="container relative py-10 md:py-50 w-full">
+                    <div className={`${layoutStyles.container} relative py-10 md:py-50`}>
                         {/* Circle background */}
                         <div className="circle absolute top-[10vh] left-[2vw] w-[40vw] h-[40vw] sm:w-[30vw] sm:h-[30vw] md:w-[25vw] md:h-[25vw] bg-primary/40 rounded-full"></div>
                         <div className="circle absolute top-[25vh] left-[50vw] w-[40vw] h-[40vw] lg:top-[45vh] lg:left-[10vw] md:top-[45vh] md:left-[15vw] sm:w-[30vw] sm:h-[30vw] md:w-[25vw] md:h-[25vw] rounded-full bg-gradient-to-br from-[var(--primary)] to-[var(--secondary)]"></div>
@@ -123,7 +124,9 @@ export default function About() {
                 </section>
                 <section className="w-full bg-primary/10 block">
                     <div className="py-12">
-                        <div className="container grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+                        <div
+                            className={`${layoutStyles.container} grid grid-cols-2 lg:grid-cols-4 gap-8 text-center`}
+                        >
                             {numberHistory.map((child, i) => (
                                 <div key={i} className="px-4">
                                     <div className="number text-md md:text-lg font-bold">
@@ -138,7 +141,7 @@ export default function About() {
                     </div>
                 </section>
                 <section className="bg-background mb-24">
-                    <div className="container">
+                    <div className={`${layoutStyles.container}`}>
                         <Timeline
                             data={data}
                             title={"Our Steps to Bring Your Vision Into Reality"}

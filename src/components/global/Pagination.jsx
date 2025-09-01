@@ -1,18 +1,12 @@
 "use client";
 
-import { useState } from "react";
-
-export default function Pagination({ totalRows = 0, rowsPerPage = 7 }) {
-    const [currentPage, setCurrentPage] = useState(1);
-
-    // Hitung total halaman
+export default function Pagination({ totalRows = 0, rowsPerPage = 7, currentPage, onPageChange }) {
     const totalPages = Math.ceil(totalRows / rowsPerPage);
-
     const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
     const goToPage = (page) => {
         if (page >= 1 && page <= totalPages) {
-            setCurrentPage(page);
+            onPageChange?.(page); // parent yang handle state
         }
     };
 
