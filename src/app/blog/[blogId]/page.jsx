@@ -159,7 +159,7 @@ export default function BlogPostDetail({ params }) {
                     className={`${layoutStyles.container} flex flex-col items-center relative z-10`}
                 >
                     <span className="bg-primary/20 text-primary px-4 py-1 rounded-full text-xs mb-4 backdrop-blur-md border border-gray-300 dark:border-gray-700">
-                        {blog.Category}
+                        {blog.category}
                     </span>
                     <h1 className="text-3xl md:text-5xl font-bold mb-5 text-center text-gray-900 dark:text-gray-100">
                         {blog.title}

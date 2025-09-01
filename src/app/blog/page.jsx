@@ -9,7 +9,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { blogData } from "@/mockupdata.js";
 import { layoutStyles } from "../style";
-import { FolderX } from "lucide-react";
+import { EmptyData } from "@/components/global";
 
 export default function Blog() {
     const [currCategory, setCurrCategory] = useState("all");
@@ -64,24 +64,30 @@ export default function Blog() {
                         Stay informed with the latest technology news, insightful perspectives, and
                         events shaping the future of innovation.
                     </p>
-                    <div className="relative w-full lg:w-[50vw] flex gap-3">
-                        <Input
-                            id="search"
-                            placeholder="What are you looking for?"
-                            type="text"
-                            isSearch={true}
-                            value={searchInput}
-                            onChange={(e) => setSearchInput(e.target.value)}
-                        />
-                        <Button
-                            className="min-w-max px-4 rounded-lg bg-primary hover:bg-primary/80 text-white shadow-lg transition"
-                            onClick={() => {
+                    <div className="relative w-full lg:w-[50vw]">
+                        <form
+                            onSubmit={(e) => {
+                                e.preventDefault(); // biar ga reload halaman
                                 setSearchQuery(searchInput); // commit pencarian
                                 setCurrentPage(1); // reset pagination
                             }}
+                            className="flex gap-3"
                         >
-                            Find now
-                        </Button>
+                            <Input
+                                id="search"
+                                placeholder="What are you looking for?"
+                                type="text"
+                                isSearch={true}
+                                value={searchInput}
+                                onChange={(e) => setSearchInput(e.target.value)}
+                            />
+                            <Button
+                                type="submit"
+                                className="min-w-max px-4 rounded-lg bg-primary hover:bg-primary/80 text-white shadow-lg transition"
+                            >
+                                Find now
+                            </Button>
+                        </form>
                     </div>
                 </div>
             </section>
@@ -145,15 +151,7 @@ export default function Blog() {
                         ))}
                     </BentoGrid>
                 ) : (
-                    <div className="flex flex-col items-center justify-center py-32 text-center">
-                        <FolderX />
-                        <h3 className="text-md font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                            No results found
-                        </h3>
-                        <p className="text-gray-500 dark:text-gray-400 max-w-md">
-                            Try adjusting your search or filters to find what you are looking for.
-                        </p>
-                    </div>
+                    <EmptyData />
                 )}
 
                 {/* Pagination */}
