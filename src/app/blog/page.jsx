@@ -93,7 +93,7 @@ export default function Blog() {
             </section>
 
             {/* Categories */}
-            <section className="min-h-max bg-background">
+            <section id="blog" className="min-h-max bg-background">
                 <div className={`${layoutStyles.container} py-24 flex flex-col items-center`}>
                     <h2 className="text-4xl font-bold mb-6 text-black dark:text-white">
                         Categories
@@ -124,7 +124,7 @@ export default function Blog() {
             </section>
 
             {/* Blog Grid */}
-            <section id="blog" className="mb-24">
+            <section className="mb-24">
                 {paginatedData.length > 0 ? (
                     <BentoGrid className={`${layoutStyles.container} bg-background mb-12`}>
                         {paginatedData.map((item, i) => (

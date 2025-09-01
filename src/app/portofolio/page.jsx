@@ -53,7 +53,7 @@ export default function Portofolio() {
                 </div>
             </section>
 
-            <section className="bg-background pt-24">
+            <section id="our-portofolio" className="bg-background pt-24">
                 <div className={`${layoutStyles.container} head-category`}>
                     <div className="category flex w-full justify-center flex-col md:flex-row md:flex-wrap">
                         {category.map((item, i) => {
@@ -75,9 +75,9 @@ export default function Portofolio() {
                     </div>
                 </div>
             </section>
-            <section id="our-portofolio" className="bg-background mb-24">
+            <section className="bg-background mb-24">
                 <BentoGrid
-                    className={`${layoutStyles.container} md:grid-cols-2 bg-background pt-24 md:auto-rows-[34rem]`}
+                    className={`${layoutStyles.container} md:grid-cols-2 bg-background pt-24 md:auto-rows-[30rem]`}
                 >
                     {paginatedData.map((item, i) => (
                         <BentoGridItem
@@ -85,12 +85,12 @@ export default function Portofolio() {
                             title={item.title}
                             description={item.description}
                             header={
-                                <div className="relative w-full h-72 md:h-[32rem] rounded-md overflow-hidden">
+                                <div className="relative w-full aspect-video rounded-md overflow-hidden">
                                     <Image
                                         src={item.header.src}
                                         alt={item.header.alt}
                                         fill
-                                        className="object-cover opacity-60 hover:opacity-100 transition duration-500 ease-in-out transform hover:scale-110 hover:rotate-2"
+                                        className="object-cover opacity-60 hover:opacity-100 transition duration-500 ease-in-out transform hover:scale-150 hover:translate-y-10 hover:rotate-5"
                                         priority
                                     />
                                 </div>

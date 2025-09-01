@@ -2,125 +2,188 @@ const portofolioData = [
     {
         Id: 1,
         category: { label: "Company Profile", value: "company-profile" },
-        title: "Modern Company Profile Website",
+        title: "Multilink Trans Indonesia",
         description:
-            "A sleek and responsive company profile website built to showcase brand identity.",
-        header: { src: "/portfolio/company1.jpg", alt: "Company Profile Website" },
+            "A sleek and responsive company profile website built to strengthen brand presence and highlight corporate services.",
+        header: { src: "/portofolio/multilink-mockup.png", alt: "Company Profile Website" },
         content: [
             {
                 type: "paragraph",
-                text: "We developed a modern company profile website with a clean UI/UX that reflects the client’s brand values. The site is optimized for performance and accessibility.",
+                text: "We developed a modern company profile website with a clean UI/UX that reflects the client’s brand values. The site is optimized for performance and accessibility, making it easier for potential clients to connect with Multilink Trans Indonesia.",
             },
             {
                 type: "heading",
-                text: "Key Features",
+                text: "Summary",
+            },
+            {
+                type: "paragraph",
+                text: "The project aimed to provide Multilink Trans Indonesia with a digital presence that showcases their logistics services in a professional and modern way. The website highlights company achievements, services, and client testimonials.",
+            },
+            {
+                type: "heading",
+                text: "Technologies Used",
             },
             {
                 type: "list",
                 items: [
-                    "Responsive design for all devices",
-                    "SEO-optimized content structure",
-                    "Custom CMS for easy content updates",
-                    "Integration with corporate social media",
+                    "Next.js for server-side rendering and performance",
+                    "Tailwind CSS for responsive and modern styling",
+                    "Headless CMS (Strapi) for content management",
+                    "Vercel for deployment and hosting",
                 ],
-            },
-            {
-                type: "image",
-                src: "/portfolio/company1-preview.jpg",
-                alt: "Company Profile Preview",
-                caption: "Homepage of the modern company profile website.",
             },
         ],
     },
     {
         Id: 2,
         category: { label: "Information System", value: "information-system" },
-        title: "Hospital Management Information System",
-        description: "A complete system for managing hospital operations efficiently.",
-        header: { src: "/portfolio/infosys1.jpg", alt: "Hospital Management Information System" },
+        title: "Flood Control Management System (SIPBANJA-2)",
+        description:
+            "An integrated flood monitoring and control information system with GIS support.",
+        header: {
+            src: "/portofolio/sipbanja2-map-mockup.png",
+            alt: "Flood Control Management Information System",
+        },
         content: [
             {
                 type: "paragraph",
-                text: "We designed and implemented a hospital management information system (HMIS) that streamlines patient registration, medical records, and billing processes.",
+                text: "We built a flood control management system that combines geospatial visualization with real-time monitoring of water levels. The system supports decision-making for authorities by providing predictive analysis and automated alerts.",
             },
             {
                 type: "heading",
-                text: "Modules Included",
+                text: "Summary",
+            },
+            {
+                type: "paragraph",
+                text: "The system helps local governments and disaster management agencies to plan, monitor, and respond to potential flood events more effectively.",
+            },
+            {
+                type: "heading",
+                text: "Technologies Used",
             },
             {
                 type: "list",
                 items: [
-                    "Patient registration & electronic health records",
-                    "Appointment scheduling system",
-                    "Pharmacy & inventory management",
-                    "Billing and insurance integration",
+                    "Laravel for backend development",
+                    "PostgreSQL with PostGIS for spatial data management",
+                    "Leaflet.js for interactive maps",
+                    "Bootstrap for UI framework",
+                    "REST API for mobile and third-party integrations",
                 ],
-            },
-            {
-                type: "quote",
-                text: "“This system improved operational efficiency by 40% within six months.” – Client Feedback",
             },
         ],
     },
     {
         Id: 3,
         category: { label: "Mobile Application", value: "mobile-app" },
-        title: "E-Commerce Mobile Application",
-        description: "Cross-platform mobile app for seamless shopping experiences.",
-        header: { src: "/portfolio/mobile1.jpg", alt: "E-Commerce Mobile App" },
+        title: "Flood Control Management System (SIPBANJA-1)",
+        description: "Mobile app for flood monitoring and community reporting system.",
+        header: {
+            src: "/portofolio/sipbanja1-dash-mockup.png",
+            alt: "Flood Control Mobile Application",
+        },
         content: [
             {
                 type: "paragraph",
-                text: "We built a mobile application for e-commerce that allows customers to browse products, track orders, and make secure payments with ease.",
+                text: "We designed and developed a mobile app version of the flood monitoring system to empower citizens and field officers to report real-time flood conditions and receive early warnings.",
             },
             {
                 type: "heading",
-                text: "Core Functionalities",
+                text: "Summary",
+            },
+            {
+                type: "paragraph",
+                text: "The mobile app extends the web-based SIPBANJA system by offering mobile-first usability for faster reporting and access to critical information.",
+            },
+            {
+                type: "heading",
+                text: "Technologies Used",
             },
             {
                 type: "list",
                 items: [
-                    "User-friendly product catalog",
-                    "Multiple payment gateway integration",
-                    "Real-time order tracking",
-                    "Push notifications for promotions",
+                    "React Native for cross-platform mobile app development",
+                    "Firebase for push notifications",
+                    "REST API for data integration",
+                    "Google Maps SDK for location-based services",
                 ],
-            },
-            {
-                type: "image",
-                src: "/portfolio/mobile1-preview.jpg",
-                alt: "E-Commerce App Screens",
-                caption: "The app provides a smooth and modern shopping experience.",
             },
         ],
     },
     {
         Id: 4,
-        category: { label: "IoT Development", value: "iot-dev" },
-        title: "Smart Home IoT Development",
-        description: "IoT solution to automate and monitor home devices.",
-        header: { src: "/portfolio/iot1.jpg", alt: "Smart Home IoT System" },
+        category: { label: "Mobile Application", value: "mobile-app" },
+        title: "Smart Apartments App",
+        description: "A smart living mobile application designed for Rusunami residents.",
+        header: {
+            src: "/portofolio/srusun-app-dash-mockup.png",
+            alt: "Smart Apartments Mobile App",
+        },
         content: [
             {
                 type: "paragraph",
-                text: "Our IoT solution enables homeowners to control and monitor their devices remotely, improving convenience and energy efficiency.",
+                text: "The Smart Apartments app provides residents with an all-in-one platform to manage their apartment living. It includes features such as online bill payments, maintenance requests, community announcements, and IoT device control.",
             },
             {
                 type: "heading",
-                text: "System Capabilities",
+                text: "Summary",
+            },
+            {
+                type: "paragraph",
+                text: "The app is designed to improve convenience, security, and connectivity for residents by digitizing apartment services and integrating smart home devices.",
+            },
+            {
+                type: "heading",
+                text: "Technologies Used",
             },
             {
                 type: "list",
                 items: [
-                    "Remote lighting and climate control",
-                    "Smart energy consumption monitoring",
-                    "Security system with motion sensors",
-                    "Voice assistant integration",
+                    "Flutter for cross-platform mobile development",
+                    "Firebase Authentication for secure login",
+                    "IoT integration via MQTT protocol",
+                    "Node.js + Express backend API",
+                    "MongoDB for scalable data storage",
                 ],
             },
+        ],
+    },
+    {
+        Id: 5,
+        category: { label: "Information System", value: "information-system" },
+        title: "Rusunami File Management System",
+        description:
+            "A document and file management system tailored for Rusunami residents and management.",
+        header: {
+            src: "/portofolio/jarrdin-member-mockup.png",
+            alt: "Rusunami File Management System",
+        },
+        content: [
             {
-                type: "quote",
-                text: "“With the IoT system, I can control my entire home from my smartphone.” – User Testimonial",
+                type: "paragraph",
+                text: "This system digitizes document management for Rusunami residents and administrators, allowing secure storage, retrieval, and sharing of important documents such as ownership certificates, payment receipts, and community regulations.",
+            },
+            {
+                type: "heading",
+                text: "Summary",
+            },
+            {
+                type: "paragraph",
+                text: "The solution streamlines administrative work and provides residents with easier access to their digital documents anytime, anywhere.",
+            },
+            {
+                type: "heading",
+                text: "Technologies Used",
+            },
+            {
+                type: "list",
+                items: [
+                    "Laravel for backend system",
+                    "MySQL for structured database storage",
+                    "Tailwind CSS for modern UI design",
+                    "JWT Authentication for secure access",
+                    "Cloud storage integration (AWS S3)",
+                ],
             },
         ],
     },
