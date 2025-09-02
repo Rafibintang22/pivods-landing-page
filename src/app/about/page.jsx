@@ -1,4 +1,3 @@
-"use client";
 import { Nav, WhatsAppButton } from "@/components/global";
 import Image from "next/image";
 import { CheckCircle } from "lucide-react";
@@ -12,6 +11,85 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import CtaBanner from "@/components/ui/cta-banner";
 import { FreeConsultation } from "@/components/section";
+import { aboutSchema } from "@/lib/json.ld";
+import Script from "next/script";
+export const metadata = {
+	title: "About Us - Pivods Custom Software & Digital Innovation Solutions",
+	description:
+		"Pivods is a software house and digital agency from Indonesia, specializing in custom software development, mobile & desktop applications, information systems, AI, IoT, and data analytics solutions. We empower businesses with cutting-edge technology and digital innovation.",
+	keywords: [
+		// Brand & Positioning
+		"Pivods",
+		"Digital Innovation Pioneer",
+		"Software House Indonesia",
+		"Digital Agency Indonesia",
+		"IT Solutions Partner",
+		"Cutting Edge Technologies",
+		// Core Service Keywords (English)
+		"Custom Software",
+		"Custom Software Development",
+		"Application Development",
+		"Web & App Development",
+		"Mobile Application Development",
+		"Desktop Application Development",
+		"Information System Development",
+		"Data Analytics Dashboard",
+		"Machine Learning Development",
+		"AI Automation",
+		"IoT Development",
+		"Digital Transformation Solutions",
+		"Business Technology Solutions",
+		// Core Service Keywords (Indonesian)
+		"Jasa Pembuatan Software",
+		"Jasa Pembuatan Aplikasi",
+		"Jasa Pembuatan Website",
+		"Website Company Profile",
+		"Sistem Informasi",
+		"Dashboard Data Analytics",
+		"Pengembangan Aplikasi Mobile",
+		"Pengembangan Aplikasi Desktop",
+		"Jasa IT Profesional",
+		"Solusi Teknologi Bisnis",
+		"Startup IT Partner",
+		"Jasa Website Murah Berkualitas",
+	],
+	robots: {
+		index: true,
+		follow: true,
+	},
+	alternates: {
+		canonical: "https://pivods.com/about",
+		languages: {
+			"id-ID": "https://pivods.com/id/about",
+			"en-US": "https://pivods.com/en/about",
+		},
+	},
+	openGraph: {
+		title: "About Us | Pivods - Custom Software & Digital Innovation",
+		description:
+			"Discover Pivods, a software house and digital agency from Indonesia delivering custom software, mobile & desktop applications, AI, IoT, and digital transformation solutions for businesses.",
+		url: "https://pivods.com/about",
+		siteName: "Pivods",
+		images: [
+			{
+				url: "https://pivods.com/og-about.png",
+				width: 1200,
+				height: 630,
+				alt: "About Pivods - Custom Software & Digital Innovation",
+			},
+		],
+		locale: "en_US",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "About Pivods - Custom Software & Digital Innovation",
+		description:
+			"Software house and digital agency from Indonesia, providing custom software, AI, IoT, and digital transformation solutions for business growth.",
+		images: ["https://pivods.com/og-about.png"],
+	},
+};
+
 export default function AboutUs() {
 	const data = [
 		{
@@ -60,6 +138,14 @@ export default function AboutUs() {
 
 	return (
 		<>
+			<Script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify(aboutSchema),
+				}}
+				strategy="afterInteractive"
+			/>
+
 			<Nav />
 			<main>
 				<section className="h-[35vh] lg:h-[50vh] w-full flex justify-center items-center">

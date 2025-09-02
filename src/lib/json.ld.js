@@ -28,7 +28,7 @@ export const homeSchema = {
     "sameAs": [
         "https://www.linkedin.com/company/pivods",
         "https://twitter.com/pivods",
-        "https://www.instagram.com/pivods"
+        "https://www.instagram.com/pivods_"
     ],
     "service": [
         {
@@ -66,5 +66,174 @@ export const homeSchema = {
             "name": "Mobile & Desktop Application",
             "description": "Aplikasi mobile & desktop. Mobile and desktop application development."
         }
+    ]
+};
+
+export const aboutSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "About Us - Pivods",
+    "url": "https://pivods.com/about",
+    "description":
+        "Learn more about Pivods, a software house, IT vendor, and digital agency from Indonesia. We provide custom software development, IT consulting, mobile & desktop applications, AI, IoT, and data analytics solutions.",
+    "mainEntity": {
+        "@type": "Organization",
+        "name": "Pivods",
+        "url": "https://pivods.com",
+        "logo": "https://pivods.com/logo.png",
+        "foundingDate": "2023",
+        "foundingLocation": {
+            "@type": "Place",
+            "name": "Indonesia"
+        },
+        "description":
+            "Pivods is a digital innovation pioneer from Indonesia, acting as an IT vendor, IT consultant, and software house. We provide IT solutions such as custom software, company profile websites, information systems, AI, IoT, machine learning, and mobile & desktop applications.",
+        "keywords": [
+            // Brand & Positioning
+            "Pivods",
+            "Digital Innovation Pioneer",
+            "Software House Indonesia",
+            "Digital Agency Indonesia",
+            "Cutting Edge Technologies",
+            // IT Vendor & Consultant
+            "IT Vendor",
+            "IT Consultant",
+            "IT Consulting Services",
+            "IT Services Company",
+            "IT Solutions Provider",
+            "Vendor IT Indonesia",
+            "Konsultan IT",
+            "Jasa Konsultasi IT",
+            "Perusahaan Jasa IT",
+            // Core Service Keywords (English)
+            "Custom Software",
+            "Custom Software Development",
+            "Application Development",
+            "Web & App Development",
+            "Mobile Application Development",
+            "Desktop Application Development",
+            "Information System Development",
+            "Data Analytics Dashboard",
+            "Machine Learning Development",
+            "AI Automation",
+            "IoT Development",
+            "Digital Transformation Solutions",
+            // Core Service Keywords (Indonesian)
+            "Jasa Pembuatan Software",
+            "Jasa Pembuatan Aplikasi",
+            "Jasa Pembuatan Website",
+            "Website Company Profile",
+            "Sistem Informasi",
+            "Dashboard Data Analytics",
+            "Pengembangan Aplikasi Mobile",
+            "Pengembangan Aplikasi Desktop",
+            "Jasa IT Profesional",
+            "Solusi Teknologi Bisnis",
+            "Startup IT Partner",
+            "Jasa Website Murah Berkualitas"
+        ],
+        "sameAs": [
+            "https://www.linkedin.com/company/pivods",
+            "https://twitter.com/pivods",
+            "https://www.instagram.com/pivods_"
+        ],
+        "service": [
+            {
+                "@type": "Service",
+                "name": "IT Consulting",
+                "description": "Professional IT consultant and advisory services to support business growth."
+            },
+            {
+                "@type": "Service",
+                "name": "Custom Software Development",
+                "description": "Tailored software solutions to meet unique business needs."
+            },
+            {
+                "@type": "Service",
+                "name": "Mobile & Desktop Applications",
+                "description": "Development of mobile and desktop apps to support business operations."
+            },
+            {
+                "@type": "Service",
+                "name": "Information System",
+                "description": "Business-ready information system solutions."
+            },
+            {
+                "@type": "Service",
+                "name": "AI & Machine Learning",
+                "description": "AI automation and machine learning development for business intelligence."
+            },
+            {
+                "@type": "Service",
+                "name": "IoT Development",
+                "description": "Internet of Things solutions for smarter business processes."
+            },
+            {
+                "@type": "Service",
+                "name": "Data Analytics & Dashboard",
+                "description": "Interactive dashboards and analytics for business insights."
+            }
+        ]
+    }
+};
+export const servicesSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Pivods Services",
+    "url": "https://pivods.com/services",
+    "description": "Pivods offers IT services including custom software, AI, IoT, and data analytics solutions.",
+    "mainEntity": [
+        { "@type": "Service", "name": "Custom Software Development", "description": "Tailored software solutions for your business." },
+        { "@type": "Service", "name": "IT Consulting", "description": "Professional IT consulting and advisory services." },
+        { "@type": "Service", "name": "Mobile & Desktop Applications", "description": "Development of apps to support business operations." },
+        { "@type": "Service", "name": "AI & Machine Learning", "description": "AI automation and machine learning solutions." },
+        { "@type": "Service", "name": "IoT Development", "description": "Internet of Things solutions for smart business processes." },
+        { "@type": "Service", "name": "Data Analytics & Dashboard", "description": "Interactive dashboards and data insights." }
+    ]
+};
+
+const metadata = {
+    title: "Portfolio | Pivods - Custom Software & Digital Projects",
+    description:
+        "Check out Pivods portfolio showcasing custom software, web development, mobile & desktop apps, AI, IoT, and data analytics projects.",
+    keywords: [
+        "Pivods", "Portfolio", "Case Study", "Custom Software", "Web Development",
+        "Mobile Apps", "Desktop Apps", "AI Projects", "IoT Projects", "Data Analytics",
+        "Jasa Pembuatan Software", "Jasa IT Profesional", "Digital Agency Indonesia"
+    ],
+    robots: { index: true, follow: true },
+    alternates: {
+        canonical: "https://pivods.com/portfolio",
+        languages: { "id-ID": "https://pivods.com/id/portfolio", "en-US": "https://pivods.com/en/portfolio" },
+    },
+    openGraph: {
+        title: "Portfolio | Pivods - Custom Software & Digital Projects",
+        description: "Explore Pivods digital projects: custom software, mobile & desktop apps, AI, IoT, and analytics.",
+        url: "https://pivods.com/portfolio",
+        siteName: "Pivods",
+        images: [{ url: "https://pivods.com/og-portfolio.png", width: 1200, height: 630, alt: "Pivods Portfolio" }],
+        locale: "en_US",
+        type: "website",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Pivods Portfolio - Custom Software & Digital Projects",
+        description: "Showcasing Pivods projects in software, web, AI, IoT, and analytics solutions.",
+        images: ["https://pivods.com/og-portfolio.png"],
+    },
+};
+
+export const portfolioSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Pivods Portfolio",
+    "url": "https://pivods.com/portfolio",
+    "description": "Showcase of Pivods projects including custom software, web development, mobile & desktop apps, AI, IoT, and data analytics.",
+    "mainEntity": [
+        { "@type": "CreativeWork", "name": "Company Profile Website", "description": "Professional company profile website development." },
+        { "@type": "CreativeWork", "name": "Mobile & Desktop Application", "description": "Apps developed for business productivity." },
+        { "@type": "CreativeWork", "name": "AI Agent System", "description": "AI-based automation and solutions." },
+        { "@type": "CreativeWork", "name": "IoT Projects", "description": "Smart IoT systems for business optimization." },
+        { "@type": "CreativeWork", "name": "Data Analytics Dashboards", "description": "Interactive dashboards for insights." }
     ]
 };

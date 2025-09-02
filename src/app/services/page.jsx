@@ -4,9 +4,73 @@ import CtaBanner from "@/components/ui/cta-banner";
 import Image from "next/image";
 import { layoutStyles } from "../style";
 import { CardDemo, Skeleton } from "@/components/ui/demo";
+import Script from "next/script";
+import { servicesSchema } from "@/lib/json.ld";
+export const metadata = {
+	title: "Our Services - Pivods Custom Software & IT Solutions",
+	description:
+		"Explore Pivods services including custom software, IT consulting, mobile & desktop apps, AI, IoT, and data analytics. We help businesses grow with technology.",
+	keywords: [
+		"Pivods",
+		"Custom Software",
+		"Software House Indonesia",
+		"Digital Agency Indonesia",
+		"IT Vendor",
+		"IT Consultant",
+		"IT Services",
+		"Application Development",
+		"Web Development",
+		"Mobile Application",
+		"Desktop Application",
+		"AI",
+		"IoT",
+		"Data Analytics",
+		"Jasa Pembuatan Software",
+		"Jasa IT Profesional",
+	],
+	robots: { index: true, follow: true },
+	alternates: {
+		canonical: "https://pivods.com/services",
+		languages: {
+			"id-ID": "https://pivods.com/id/services",
+			"en-US": "https://pivods.com/en/services",
+		},
+	},
+	openGraph: {
+		title: "Our Services | Pivods - Custom Software & IT Solutions",
+		description:
+			"Pivods provides custom software, IT consulting, AI, IoT, data analytics, and mobile & desktop apps for business growth.",
+		url: "https://pivods.com/services",
+		siteName: "Pivods",
+		images: [
+			{
+				url: "https://pivods.com/og-services.png",
+				width: 1200,
+				height: 630,
+				alt: "Pivods Services",
+			},
+		],
+		locale: "en_US",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Pivods Services - Custom Software & IT Solutions",
+		description:
+			"IT consulting, custom software, AI, IoT, and analytics solutions from Pivods.",
+		images: ["https://pivods.com/og-services.png"],
+	},
+};
 export default function PivodsServices() {
 	return (
 		<>
+			<Script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify(servicesSchema),
+				}}
+				strategy="afterInteractive"
+			/>
 			<Nav />
 			<main>
 				<section className="h-[35vh] lg:h-[50vh] w-full flex justify-center items-center">
