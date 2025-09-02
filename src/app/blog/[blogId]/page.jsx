@@ -94,7 +94,7 @@ function BlogContent({ content }) {
 
 // Komponen related posts
 function RelatedPosts({ currentId, category }) {
-    const related = blogData.filter((item) => item.Id !== currentId && item.Category === category);
+    const related = blogData.filter((item) => item.Id !== currentId && item.category === category);
 
     if (!related.length) return null;
 
@@ -112,12 +112,12 @@ function RelatedPosts({ currentId, category }) {
                             "group/bento shadow-input row-span-1 flex flex-col justify-between space-y-4 rounded-xl border border-neutral-200 bg-white p-4 transition duration-200 hover:shadow-xl dark:border-white/[0.2] dark:bg-black dark:shadow-none"
                         )}
                     >
-                        <div className="relative w-full h-50 md:h-full rounded-md">
+                        <div className="relative w-full h-50 md:h-full rounded-md overflow-hidden">
                             <Image
                                 src={post.header.src}
                                 alt={post.header.alt}
                                 fill
-                                className="object-cover opacity-60 hover:opacity-100 transition duration-300"
+                                className="object-cover opacity-60 hover:opacity-100 transition duration-500 ease-in-out transform hover:scale-110 hover:rotate-2"
                                 priority
                             />
                         </div>
@@ -159,7 +159,7 @@ export default function BlogPostDetail({ params }) {
                     className={`${layoutStyles.container} flex flex-col items-center relative z-10`}
                 >
                     <span className="bg-primary/20 text-primary px-4 py-1 rounded-full text-xs mb-4 backdrop-blur-md border border-gray-300 dark:border-gray-700">
-                        {blog.Category}
+                        {blog.category}
                     </span>
                     <h1 className="text-3xl md:text-5xl font-bold mb-5 text-center text-gray-900 dark:text-gray-100">
                         {blog.title}
@@ -174,7 +174,7 @@ export default function BlogPostDetail({ params }) {
             <BlogContent content={blog.content} />
 
             {/* Related Posts */}
-            <RelatedPosts currentId={blog.Id} category={blog.Category} />
+            <RelatedPosts currentId={blog.Id} category={blog.category} />
 
             <Footer />
         </main>

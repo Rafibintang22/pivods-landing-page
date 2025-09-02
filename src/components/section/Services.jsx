@@ -1,6 +1,5 @@
 import { StickyScroll } from "../ui/sticky-scroll-reveal";
 import { layoutStyles } from "@/app/style";
-
 import { services } from "@/lib/utils";
 export default function Services() {
 	return (

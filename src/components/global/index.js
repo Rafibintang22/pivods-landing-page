@@ -2,5 +2,6 @@ import Nav from "./Nav";
 import WhatsAppButton from "./WhatsAppButton";
 import Button from "./Button";
 import Pagination from "./Pagination";
+import EmptyData from "./EmptyData";
 
-export { Nav, WhatsAppButton, Button, Pagination };
+export { Nav, WhatsAppButton, Button, Pagination, EmptyData };

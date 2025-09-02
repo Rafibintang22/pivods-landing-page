@@ -3,33 +3,38 @@ import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faMoon, faSun, faTimes } from "@fortawesome/free-solid-svg-icons";
+import {
+	faBars,
+	faMoon,
+	faSun,
+	faTimes,
+} from "@fortawesome/free-solid-svg-icons";
 import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
 import { Button } from ".";
 
 function Nav({ className }) {
-    const [isScrolled, setIsScrolled] = useState(false);
-    const [activeLang, setActiveLang] = useState("EN");
-    const { theme, setTheme } = useTheme();
-    const [menuOpen, setMenuOpen] = useState(false);
-    const pathname = usePathname();
+	const [isScrolled, setIsScrolled] = useState(false);
+	const [activeLang, setActiveLang] = useState("EN");
+	const { theme, setTheme } = useTheme();
+	const [menuOpen, setMenuOpen] = useState(false);
+	const pathname = usePathname();
 
-    useEffect(() => {
-        const handleScroll = () => setIsScrolled(window.scrollY > 0);
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+	useEffect(() => {
+		const handleScroll = () => setIsScrolled(window.scrollY > 0);
+		window.addEventListener("scroll", handleScroll);
+		return () => window.removeEventListener("scroll", handleScroll);
+	}, []);
 
-    const menu = [
+	const menu = [
 		{ name: "Home", href: "/" },
 		{ name: "About", href: "/about" },
 		{ name: "Services", href: "/services" },
-		{ name: "Portofolio", href: "#" },
+		{ name: "Portofolio", href: "/portofolio" },
 		{ name: "Blog", href: "/blog" },
 	];
 
-    return (
+	return (
 		<nav
 			className={`fixed top-0 left-0 z-50 flex justify-between items-center mx-auto max-lg:px-[30px] px-[120px] min-3xl:px-[20rem] py-6 w-full transition-colors duration-300
             ${

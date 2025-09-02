@@ -16,8 +16,12 @@ export default function Pagination({ totalRows = 0, rowsPerPage = 7, currentPage
             <button
                 onClick={() => goToPage(currentPage - 1)}
                 disabled={currentPage === 1}
-                className={`w-12 h-12 flex items-center justify-center border rounded-sm transition 
-          ${currentPage === 1 ? "text-gray-400 border-gray-200" : "hover:bg-gray-100"}`}
+                className={`cursor-pointer w-12 h-12 flex items-center justify-center border rounded-sm transition 
+          ${
+              currentPage === 1
+                  ? "text-gray-400 border-gray-200"
+                  : "hover:bg-gray-100 hover:text-background"
+          }`}
             >
                 «
             </button>
@@ -27,8 +31,12 @@ export default function Pagination({ totalRows = 0, rowsPerPage = 7, currentPage
                 <button
                     key={page}
                     onClick={() => goToPage(page)}
-                    className={`w-12 h-12 flex items-center justify-center border rounded-sm transition font-semibold
-            ${currentPage === page ? "bg-black text-white border-black" : "hover:bg-gray-100"}`}
+                    className={`cursor-pointer w-12 h-12 flex items-center justify-center border rounded-sm transition font-semibold
+            ${
+                currentPage === page
+                    ? "bg-black text-white border-black"
+                    : "hover:bg-gray-100 hover:text-background"
+            }`}
                 >
                     {page}
                 </button>
@@ -38,8 +46,12 @@ export default function Pagination({ totalRows = 0, rowsPerPage = 7, currentPage
             <button
                 onClick={() => goToPage(currentPage + 1)}
                 disabled={currentPage === totalPages}
-                className={`w-12 h-12 flex items-center justify-center border rounded-sm transition 
-          ${currentPage === totalPages ? "text-gray-400 border-gray-200" : "hover:bg-gray-100"}`}
+                className={`cursor-pointer w-12 h-12 flex items-center justify-center border rounded-sm transition 
+          ${
+              currentPage === totalPages
+                  ? "text-gray-400 border-gray-200"
+                  : "hover:bg-gray-100 hover:text-background"
+          }`}
             >
                 »
             </button>
