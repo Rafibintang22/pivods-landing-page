@@ -4,12 +4,7 @@ export default function Bloglayout({ children }) {
     return (
         <>
             <Nav />
-            <main>
-
             {children}
-                <Footer />
-
-            </main>
             <WhatsAppButton />
         </>
     );
