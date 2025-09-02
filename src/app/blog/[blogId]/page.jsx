@@ -94,7 +94,7 @@ function BlogContent({ content }) {
 
 // Komponen related posts
 function RelatedPosts({ currentId, category }) {
-    const related = blogData.filter((item) => item.Id !== currentId && item.Category === category);
+    const related = blogData.filter((item) => item.Id !== currentId && item.category === category);
 
     if (!related.length) return null;
 
@@ -174,7 +174,7 @@ export default function BlogPostDetail({ params }) {
             <BlogContent content={blog.content} />
 
             {/* Related Posts */}
-            <RelatedPosts currentId={blog.Id} category={blog.Category} />
+            <RelatedPosts currentId={blog.Id} category={blog.category} />
 
             <Footer />
         </main>
