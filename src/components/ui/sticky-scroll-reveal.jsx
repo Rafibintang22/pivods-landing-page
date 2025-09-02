@@ -2,7 +2,7 @@
 import React, { useRef, useState } from "react";
 import { useMotionValueEvent, useScroll, motion } from "motion/react";
 import { GlowingEffect } from "./glowing-effect";
-
+import Link from "next/link";
 import { Button } from "../global";
 import { ArrowUpRight } from "lucide-react";
 export const StickyScroll = ({ content, contentClassName }) => {
@@ -104,9 +104,13 @@ export const StickyScroll = ({ content, contentClassName }) => {
 								))}
 							</div>
 							<div className="flex items-center gap-2 mt-8">
-								<Button className="px-6 py-3 w-fit  rounded-xl bg-primary hover:bg-primary/80 text-white shadow-lg transition">
-									Explore More
-								</Button>
+								<Link
+									className="px-6 py-3 w-fit rounded-xl bg-primary hover:bg-primary/80 text-white shadow-lg transition"
+									href={item.link}
+									passHref
+								>
+									<span>Explore More</span>
+								</Link>
 								<div className="bg-primary-3 text-white p-3 rounded-full shadow-md">
 									<ArrowUpRight size={20} />
 								</div>

@@ -1,53 +1,18 @@
 import { layoutStyles } from "@/app/style";
 import React from "react";
 import Image from "next/image";
-import {
-	Globe,
-	Settings,
-	Users,
-	BarChart2,
-	ShieldAlert,
-	Zap,
-} from "lucide-react";
-export default function DetailServices() {
-	const problems = [
-		{
-			icon: <Globe size={15} />,
-			header: "Online Presence",
-			description:
-				"Without a strong company profile or digital footprint, your business remains invisible to potential clients.",
-		},
-		{
-			icon: <Settings size={15} />,
-			header: "Inefficient Ops",
-			description:
-				"Manual processes and outdated workflows slow teams down, drain resources, and block scalability.",
-		},
-		{
-			icon: <Users size={15} />,
-			header: "Customer Trust",
-			description:
-				"Clients today expect instant response and seamless service — without automation, trust slips away.",
-		},
-		{
-			icon: <BarChart2 size={15} />,
-			header: "Data Insight",
-			description:
-				"Businesses collect data every day, but without analytics it remains unused — numbers without value.",
-		},
-		{
-			icon: <ShieldAlert size={15} />,
-			header: "System Risk",
-			description:
-				"When systems aren’t integrated or secured, mistakes and fraud risks multiply — costing time, money, and reputation.",
-		},
-		{
-			icon: <Zap size={15} />,
-			header: "Missed Chance",
-			description:
-				"Without innovation in AI, IoT, and modern apps, competitors move faster — leaving your business behind.",
-		},
-	];
+import { pivodsServices } from "@/lib/detailservice";
+import { notFound } from "next/navigation";
+
+export default async function DetailServices({ params }) {
+	const { serviceId } = await params;
+	const service = pivodsServices[serviceId];
+
+	// Jika serviceId tidak ditemukan → 404
+	if (!service) {
+		notFound();
+	}
+
 	return (
 		<section className={layoutStyles.container}>
 			<section className="h-[35vh] lg:h-[50vh] w-full flex justify-center items-center">
@@ -63,7 +28,7 @@ export default function DetailServices() {
 					className={`${layoutStyles.container} flex flex-col items-center`}
 				>
 					<h1 className="text-3xl md:text-5xl font-bold mb-5 text-gray-900 dark:text-gray-100">
-						Services
+						{`${service.header} Services`}
 					</h1>
 					<p className="font-semibold text-center max-w-2xl max-lg:w-full">
 						Every challenge deserves the right solution. Our
@@ -85,49 +50,23 @@ export default function DetailServices() {
 					<div className="col-span-8 max-lg:col-span-12 max-lg:py-20">
 						<div className="w-full h-80 relative">
 							<Image
-								src="/services/compro/1.jpg"
-								alt={`Pivods Service For 1`}
+								src={service.bannerImage}
+								alt={`Pivods Service For ${service.header} 1`}
 								fill
 								className="object-cover object-center rounded-md"
 								priority
 							/>
 						</div>
-						<div className="w-full flex flex-col mt-10 gap-y-3">
-							<span className="bg-primary/20 text-primary w-fit h-fit px-4 py-2 rounded-full text-[15px] backdrop-blur-md">
-								Company Profile Services
-							</span>
-							<h2 className="text-4xl max-md:text-md font-bold mb-6 text-left text-white dark:text-gray-100">
-								Your Partner in{" "}
-								<span className="text-primary">
-									Cutting-Edge Technologies
-								</span>
-							</h2>
-						</div>
-						<p className="text-[16px] leading-[26px] font-normal text-[#D8D8D8] mb-[20px]">
-							Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit. Metus dis posuere amet tincidunt commodo,
-							velit. Ipsum, hac nibh fermentum nisi, platea
-							condimentum cursus velit dui. Massa volutpat odio
-							facilisis purus sit elementum. Non, sed velit dictum
-							quam. Id risus pharetra est, at rhoncus, nec
-							ullamcorper tincidunt. Id aliquet duis sollicitudin
-							diam, elit sit. Et nisi in libero facilisis sed est.
-							Elit curabitur amet risus bibendum. Posuere et eget
-							orci, tempor enim.
-						</p>
-						<p className="text-[16px] leading-[26px] font-normal text-[#D8D8D8] mb-[20px]">
-							Hac nibh fermentum nisi, platea condimentum cursus
-							velit dui. Massa volutpat odio facilisis purus sit
-							elementum. Non, sed velit dictum quam. Id risus
-							pharetra est, at rhoncus, nec ullamcorper tincidunt.
-							Id aliquet duis sollicitudin diam, elit sit.
-						</p>
+						{service.title}
+						{service.whatIs}
+						{service.trends}
+
 						<div className="grid grid-cols-12 gap-3 mt-3">
 							<div className="col-span-6 col:col-span-12">
 								<div className="w-full h-40 bg-white relative rounded-md">
 									<Image
-										src="/services/compro/2.jpg"
-										alt={`Pivods Service For 2`}
+										src={service.flexImages[0]}
+										alt={`Pivods Service For ${service.header} 2`}
 										fill
 										className="object-cover object-center rounded-md"
 										priority
@@ -137,8 +76,8 @@ export default function DetailServices() {
 							<div className="col-span-6 col:col-span-12">
 								<div className="w-full h-40 bg-white relative rounded-md">
 									<Image
-										src="/services/compro/3.jpg"
-										alt={`Pivods Service For 3`}
+										src={service.flexImages[1]}
+										alt={`Pivods Service For ${service.header} 3`}
 										fill
 										className="object-cover object-center rounded-md"
 										priority
@@ -148,14 +87,14 @@ export default function DetailServices() {
 						</div>
 						<div className="w-full mt-[40px]">
 							<h3 className="font-medium font-base-font text-white text-[35px] leading-[130.5%] mb-[20px] md:text-[25px]">
-								Why your Businesses Need a{" "}
+								Why your Businesses Need{" "}
 								<span className="text-primary font-semibold">
-									Company Profile
+									{service.header}
 								</span>
 							</h3>
 							<div className="w-full h-full gap-5 grid grid-cols-3 max-md:grid-cols-2 max-lg:grid-cols-3 max-lg:gap-x-3 max-lg:gap-y-5">
 								{/* Pain Point 1 */}
-								{problems.map((problem, index) => (
+								{service.importance.map((problem, index) => (
 									<div
 										key={index}
 										className="flex flex-col items-start gap-3 bg-primary/20 rounded-md p-3 text-left"

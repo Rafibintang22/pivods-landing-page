@@ -11,11 +11,12 @@ import {
     PieChart,
     Wifi, Cpu, Eye, Layers, Shield
     , Brain, Search,
-    Smartphone, Monitor, Package
+    Smartphone, Monitor, Package, ShieldCheck
 } from "lucide-react";
 
 export const pivodsServices = {
     "company-profile": {
+        header: "Company Profile",
         bannerImage: "/services/compro/1.jpg",
         title: <div className="w-full flex flex-col mt-10 gap-y-3">
             <span className="bg-primary/20 text-primary w-fit h-fit px-4 py-2 rounded-full text-[15px] backdrop-blur-md">
@@ -36,13 +37,18 @@ export const pivodsServices = {
             that defines how clients and partners perceive your business.
         </p>,
         trends: <p className="text-[16px] leading-[26px] font-normal text-[#D8D8D8] mb-[20px]">
-            Studies show that <span className="text-primary font-semibold">over 80%</span> of established companies
-            use a company profile as their official digital presence.
-            Businesses with a strong profile are <span className="text-primary font-semibold">60% more likely</span>
-            to gain client trust and close deals faster.
-            On top of that, having a clear and accessible profile can boost revenue by up to <span className="text-primary font-semibold">35%</span>,
-            as potential customers find it easier to connect and engage with your brand.
+            First impressions matter — <span className="text-primary font-semibold">70% of potential clients</span>
+            judge a business by its online presence.
+            Companies with a professional website report up to a <span className="text-primary font-semibold">2x increase</span>
+            in trust and <span className="text-primary font-semibold">40% higher</span> conversion rates.
+            Businesses without a strong company profile risk being overlooked by modern buyers.
+            <span className="text-primary font-semibold">
+                Pivods could build a Company Profile website that not only represents your brand,
+                but also attracts the right customers and converts visits into real sales for your business.
+            </span>
         </p>,
+
+
         flexImages: ["/services/compro/2.jpg", "/services/compro/3.jpg"],
         importance: [
             {
@@ -84,6 +90,7 @@ export const pivodsServices = {
         ],
     },
     "information-system": {
+        header: "Information System",
         bannerImage: "/services/informationsystem/1.jpg",
         title: <div className="w-full flex flex-col mt-10 gap-y-3">
             <span className="bg-primary/20 text-primary w-fit h-fit px-4 py-2 rounded-full text-[15px] backdrop-blur-md">
@@ -108,9 +115,14 @@ export const pivodsServices = {
             Research shows that <span className="text-primary font-semibold">over 75%</span> of growing companies
             adopt digital information systems to streamline their operations.
             Businesses that use integrated systems report a <span className="text-primary font-semibold">50% reduction</span>
-            in operational costs and up to <span className="text-primary font-semibold">2x faster</span> decision-making.
-            Companies with data-driven operations also achieve revenue growth of <span className="text-primary font-semibold">30% annually</span>.
+            in operational costs and make decisions <span className="text-primary font-semibold">2x faster</span>.
+            Companies with data-driven operations also achieve revenue growth of <span className="text-primary font-semibold">30% annually</span>. {" "}
+            <span className="text-primary font-semibold">
+                Pivods could build an Information System that simplifies your workflows,
+                cuts unnecessary costs, and turns efficiency into higher sales and business growth.
+            </span>
         </p>,
+
         flexImages: ["/services/informationsystem/2.jpg", "/services/informationsystem/3.jpg"],
         importance: [
             {
@@ -152,6 +164,7 @@ export const pivodsServices = {
         ],
     },
     "ai-agent-overflow": {
+        header: "AI Agent Overflow System",
         bannerImage: "/services/aiagent/1.jpg",
         title: <div className="w-full flex flex-col mt-10 gap-y-3">
             <span className="bg-primary/20 text-primary w-fit h-fit px-4 py-2 rounded-full text-[15px] backdrop-blur-md">
@@ -165,19 +178,40 @@ export const pivodsServices = {
                 with AI Agents
             </h2>
         </div>,
-        whatIs: <p className="text-[16px] leading-[26px] font-normal text-[#D8D8D8] mb-[20px]">
-            An AI Agent Overflow System helps businesses handle{" "}
-            <span className="text-primary font-semibold">high-volume interactions</span>
-            without hiring more staff. It automates responses, routes inquiries, and supports your team
-            in delivering <span className="text-primary font-semibold">24/7 seamless service</span>.
-        </p>,
-        trends: <p className="text-[16px] leading-[26px] font-normal text-[#D8D8D8] mb-[20px]">
-            Over <span className="text-primary font-semibold">65%</span> of companies using AI agents
-            report a <span className="text-primary font-semibold">40% cost reduction</span> in customer service.
-            Businesses that adopt AI systems respond to clients{" "}
-            <span className="text-primary font-semibold">3x faster</span>
-            and improve customer satisfaction by <span className="text-primary font-semibold">50%</span>.
-        </p>,
+        whatIs: (
+            <p className="text-[16px] leading-[26px] font-normal text-[#D8D8D8] mb-[20px]">
+                An AI Agent Overflow System helps businesses manage{" "}
+                <span className="text-primary font-semibold">high-volume interactions</span>
+                and streamline internal workflows. Beyond customer service, it can handle tasks
+                like form processing, approvals, and team coordination—reducing repetitive work
+                and keeping operations efficient. By automating responses and routing requests,
+                it enables{" "}
+                <span className="text-primary font-semibold">24/7 seamless support</span>
+                for both clients and employees.  <span className="text-primary font-semibold">
+                    Pivods could build an AI Agent Overflow System tailored to your workflow,
+                    addressing your unique challenges and delivering the most suitable automation
+                    solution for your business
+                </span>.
+            </p>
+        ),
+        trends: (
+            <p className="text-[16px] leading-[26px] font-normal text-[#D8D8D8] mb-[20px]">
+                Businesses adopting AI overflow systems see major gains:{" "}
+                <span className="text-primary font-semibold">65%</span> report a{" "}
+                <span className="text-primary font-semibold">40% cost reduction</span>{" "}
+                across service and workflow operations. Teams respond{" "}
+                <span className="text-primary font-semibold">3x faster</span>, cut manual processes,
+                and achieve up to a{" "}
+                <span className="text-primary font-semibold">50% boost</span>{" "}
+                in productivity and customer satisfaction—making AI adoption a key driver of growth.{" "}
+                <span className="text-primary font-semibold">
+                    Pivods could build an AI Agent Overflow System that automates your workflows,
+                    handles customer interactions at scale, and turns efficiency into real sales growth
+                    for your business.
+                </span>
+            </p>
+        ),
+
         flexImages: ["/services/aiagent/2.jpg", "/services/aiagent/3.jpg"],
         importance: [
             { icon: <Bot size={15} />, header: "Automation", description: "Handle repetitive queries instantly without human intervention." },
@@ -188,7 +222,8 @@ export const pivodsServices = {
             { icon: <Zap size={15} />, header: "Stay Ahead", description: "Adopting AI ensures your business stays competitive in digital service." },
         ],
     },
-    "data-analytics": {
+    "data-analytics-dashboard": {
+        header: "Data Analytics & Dashboard",
         bannerImage: "/services/data/1.jpg",
         title: <div className="w-full flex flex-col mt-10 gap-y-3">
             <span className="bg-primary/20 text-primary w-fit h-fit px-4 py-2 rounded-full text-[15px] backdrop-blur-md">
@@ -202,19 +237,31 @@ export const pivodsServices = {
                 with Smart Dashboards
             </h2>
         </div>,
-        whatIs: <p className="text-[16px] leading-[26px] font-normal text-[#D8D8D8] mb-[20px]">
-            Data Analytics & Dashboards allow you to monitor performance,
-            track KPIs, and gain <span className="text-primary font-semibold">real-time insights</span>.
-            Instead of raw data, you see clear visuals that support{" "}
-            <span className="text-primary font-semibold">faster decision-making</span>.
-        </p>,
-        trends: <p className="text-[16px] leading-[26px] font-normal text-[#D8D8D8] mb-[20px]">
-            Over <span className="text-primary font-semibold">70%</span> of companies say
-            dashboards improve decision speed by <span className="text-primary font-semibold">2x</span>.
-            Businesses using analytics-driven strategies achieve{" "}
-            <span className="text-primary font-semibold">25% higher profit margins</span>
-            and <span className="text-primary font-semibold">5x ROI</span> from marketing campaigns.
-        </p>,
+        whatIs: (
+            <p className="text-[16px] leading-[26px] font-normal text-[#D8D8D8] mb-[20px]">
+                Data Analytics & Dashboards empower businesses to transform complex data into clear, actionable insights.{" "}
+                With interactive visuals and real-time KPI tracking, you no longer need to interpret raw numbers.{" "}
+                Instead, you get a unified view of performance that highlights opportunities, uncovers risks early,{" "}
+                and supports <span className="text-primary font-semibold">faster and smarter decision-making</span>{" "}
+                across every level of your organization.
+            </p>
+        ),
+        trends: (
+            <p className="text-[16px] leading-[26px] font-normal text-[#D8D8D8] mb-[20px]">
+                Companies leveraging analytics report transformative results:{" "}
+                <span className="text-primary font-semibold">70%</span> say dashboards{" "}
+                doubled their decision-making speed, while analytics-driven strategies deliver{" "}
+                <span className="text-primary font-semibold">25% higher profit margins</span>.{" "}
+                Marketing campaigns become{" "}
+                <span className="text-primary font-semibold">5x more effective</span>,{" "}
+                operations run leaner, and teams gain clarity to act with confidence—turning{" "}
+                data into a direct growth engine.{" "}
+                <span className="text-primary font-semibold">
+                    Pivods could build custom dashboards that address your challenges,{" "}
+                    attract the right customers, and convert insights into measurable sales growth.
+                </span>
+            </p>
+        ),
         flexImages: ["/services/data/2.jpg", "/services/data/3.jpg"],
         importance: [
             { icon: <BarChart2 size={15} />, header: "Clear Insights", description: "Transform complex data into easy-to-read visuals." },
@@ -226,6 +273,7 @@ export const pivodsServices = {
         ],
     },
     "iot-development": {
+        header: "IoT Development",
         bannerImage: "/services/iot/1.jpg",
         title: <div className="w-full flex flex-col mt-10 gap-y-3">
             <span className="bg-primary/20 text-primary w-fit h-fit px-4 py-2 rounded-full text-[15px] backdrop-blur-md">
@@ -239,17 +287,37 @@ export const pivodsServices = {
                 for Smarter Operations
             </h2>
         </div>,
-        whatIs: <p className="text-[16px] leading-[26px] font-normal text-[#D8D8D8] mb-[20px]">
-            IoT (Internet of Things) connects devices and sensors, allowing{" "}
-            <span className="text-primary font-semibold">automation, monitoring, and control</span>.
-            From smart homes to industrial systems, IoT empowers businesses with{" "}
-            <span className="text-primary font-semibold">real-time visibility</span>.
-        </p>,
-        trends: <p className="text-[16px] leading-[26px] font-normal text-[#D8D8D8] mb-[20px]">
-            By 2030, over <span className="text-primary font-semibold">25 billion devices</span> will be IoT-connected.
-            Companies using IoT report <span className="text-primary font-semibold">30% lower costs</span>
-            and <span className="text-primary font-semibold">45% efficiency gains</span> in operations.
-        </p>,
+        whatIs: (
+            <p className="text-[16px] leading-[26px] font-normal text-[#D8D8D8] mb-[20px]">
+                IoT (Internet of Things) connects devices and sensors to create{" "}
+                <span className="text-primary font-semibold">automation, monitoring, and control</span>{" "}
+                across homes, cities, and industries.{" "}
+                With real-time data streams, businesses gain{" "}
+                <span className="text-primary font-semibold">visibility and predictive insights</span>{" "}
+                that improve decision-making, reduce downtime, and open new opportunities
+                for smarter operations and innovative customer experiences.
+            </p>
+        ),
+        trends: (
+            <p className="text-[16px] leading-[26px] font-normal text-[#D8D8D8] mb-[20px]">
+                By 2030, over{" "}
+                <span className="text-primary font-semibold">25 billion devices</span>{" "}
+                will be IoT-connected. Companies using IoT report{" "}
+                <span className="text-primary font-semibold">30% lower costs</span>{" "}
+                and{" "}
+                <span className="text-primary font-semibold">45% efficiency gains</span>{" "}
+                in operations—unlocking smarter workflows and new revenue streams.{" "}
+                Beyond efficiency, IoT adoption helps reduce waste, optimize energy use,{" "}
+                and strengthen{" "}
+                <span className="text-primary font-semibold">fraud detection and data protection</span>{" "}
+                across critical business processes.{" "}
+                <span className="text-primary font-semibold">
+                    Pivods could build IoT solutions that integrate your devices,{" "}
+                    give real-time control, and turn connected data into measurable growth,{" "}
+                    while helping your business stay efficient, reduce costs, and protect against fraud.
+                </span>
+            </p>
+        ),
         flexImages: ["/services/iot/2.jpg", "/services/iot/3.jpg"],
         importance: [
             { icon: <Wifi size={15} />, header: "Seamless Connectivity", description: "Integrate multiple devices into one ecosystem." },
@@ -261,10 +329,11 @@ export const pivodsServices = {
         ],
     },
     "machine-learning": {
+        header: "Machine Learning",
         bannerImage: "/services/ml/1.jpg",
         title: <div className="w-full flex flex-col mt-10 gap-y-3">
             <span className="bg-primary/20 text-primary w-fit h-fit px-4 py-2 rounded-full text-[15px] backdrop-blur-md">
-                Machine Learning Development
+                Machine Learning
             </span>
             <h2 className="text-4xl max-md:text-md font-bold mb-6 text-left text-white dark:text-gray-100">
                 Unlock{" "}
@@ -274,18 +343,39 @@ export const pivodsServices = {
                 with Machine Learning
             </h2>
         </div>,
-        whatIs: <p className="text-[16px] leading-[26px] font-normal text-[#D8D8D8] mb-[20px]">
-            Machine Learning (ML) enables systems to{" "}
-            <span className="text-primary font-semibold">learn from data</span>
-            and improve over time without manual programming.
-            It’s the key to <span className="text-primary font-semibold">personalization, automation, and prediction</span>.
-        </p>,
-        trends: <p className="text-[16px] leading-[26px] font-normal text-[#D8D8D8] mb-[20px]">
-            Over <span className="text-primary font-semibold">80%</span> of enterprises
-            are investing in ML to stay competitive.
-            ML adoption leads to <span className="text-primary font-semibold">50% faster decision-making</span>
-            and <span className="text-primary font-semibold">25% higher productivity</span>.
-        </p>,
+        whatIs: (
+            <p className="text-[16px] leading-[26px] font-normal text-[#D8D8D8] mb-[20px]">
+                Machine Learning (ML) enables systems to{" "}
+                <span className="text-primary font-semibold">learn from data</span>{" "}
+                and improve over time without manual programming.{" "}
+                It’s the key to{" "}
+                <span className="text-primary font-semibold">personalization, automation, and prediction</span>,{" "}
+                empowering businesses to optimize processes, deliver smarter customer experiences,
+                and make data-driven strategies more effective.
+            </p>
+        ),
+        trends: (
+            <p className="text-[16px] leading-[26px] font-normal text-[#D8D8D8] mb-[20px]">
+                Over{" "}
+                <span className="text-primary font-semibold">80%</span> of enterprises{" "}
+                are investing in ML to stay competitive. ML adoption leads to{" "}
+                <span className="text-primary font-semibold">50% faster decision-making</span>{" "}
+                and{" "}
+                <span className="text-primary font-semibold">25% higher productivity</span>.{" "}
+                Companies leverage ML for{" "}
+                <span className="text-primary font-semibold">demand forecasting</span>,{" "}
+                <span className="text-primary font-semibold">predictive maintenance</span>,{" "}
+                <span className="text-primary font-semibold">fraud detection</span>,{" "}
+                and{" "}
+                <span className="text-primary font-semibold">customer behavior prediction</span>—
+                unlocking efficiency, reducing risks, and discovering new revenue streams.{" "}
+                <span className="text-primary font-semibold">
+                    Pivods could build Machine Learning solutions tailored to your data,{" "}
+                    enabling accurate forecasting, smarter automation, and turning predictions
+                    into real business growth.
+                </span>
+            </p>
+        ),
         flexImages: ["/services/ml/2.jpg", "/services/ml/3.jpg"],
         importance: [
             { icon: <Brain size={15} />, header: "Smart Predictions", description: "Anticipate trends, risks, and customer behavior." },
@@ -296,7 +386,8 @@ export const pivodsServices = {
             { icon: <Rocket size={15} />, header: "Innovation Driver", description: "Build smarter solutions that keep your business future-ready." },
         ],
     },
-    "mobile-desktop-app": {
+    "mobile-desktop-apps": {
+        header: "Mobile & Desktop Application",
         bannerImage: "/services/app/1.jpg",
         title: <div className="w-full flex flex-col mt-10 gap-y-3">
             <span className="bg-primary/20 text-primary w-fit h-fit px-4 py-2 rounded-full text-[15px] backdrop-blur-md">
@@ -310,19 +401,41 @@ export const pivodsServices = {
                 for Every Platform
             </h2>
         </div>,
-        whatIs: <p className="text-[16px] leading-[26px] font-normal text-[#D8D8D8] mb-[20px]">
-            Mobile & Desktop Applications are{" "}
-            <span className="text-primary font-semibold">direct touchpoints</span>
-            between your business and customers.
-            From productivity tools to customer apps, they deliver{" "}
-            <span className="text-primary font-semibold">smooth digital experiences</span>.
-        </p>,
-        trends: <p className="text-[16px] leading-[26px] font-normal text-[#D8D8D8] mb-[20px]">
-            Users spend <span className="text-primary font-semibold">90% of mobile time</span> inside apps.
-            Companies investing in custom apps experience{" "}
-            <span className="text-primary font-semibold">3x higher engagement</span>
-            and <span className="text-primary font-semibold">40% sales growth</span>.
-        </p>,
+        whatIs: (
+            <p className="text-[16px] leading-[26px] font-normal text-[#D8D8D8] mb-[20px]">
+                Mobile & Desktop Applications are{" "}
+                <span className="text-primary font-semibold">direct touchpoints</span>{" "}
+                between your business and customers.{" "}
+                From productivity tools to customer-facing apps, they deliver{" "}
+                <span className="text-primary font-semibold">smooth digital experiences</span>{" "}
+                that strengthen brand presence, streamline operations, and create more opportunities
+                to engage with your audience in meaningful ways.
+            </p>
+        ),
+        trends: (
+            <p className="text-[16px] leading-[26px] font-normal text-[#D8D8D8] mb-[20px]">
+                Users spend{" "}
+                <span className="text-primary font-semibold">90% of mobile time</span>{" "}
+                inside apps. Companies investing in custom apps experience{" "}
+                <span className="text-primary font-semibold">3x higher engagement</span>{" "}
+                and{" "}
+                <span className="text-primary font-semibold">40% sales growth</span>.{" "}
+                Integrated{" "}
+                <span className="text-primary font-semibold">CRM systems</span>{" "}
+                within apps also drive{" "}
+                <span className="text-primary font-semibold">stronger customer loyalty, higher retention,</span>{" "}
+                and more effective upselling opportunities.{" "}
+                Businesses that unify apps with CRM see{" "}
+                <span className="text-primary font-semibold">25% faster response times</span>{" "}
+                and{" "}
+                <span className="text-primary font-semibold">35% more repeat purchases</span>.{" "}
+                <span className="text-primary font-semibold">
+                    Pivods could build Mobile & Desktop Applications that not only engage users,{" "}
+                    but also connect seamlessly with CRM to improve efficiency, nurture relationships,{" "}
+                    and turn customer interactions into measurable sales growth.
+                </span>
+            </p>
+        ),
         flexImages: ["/services/app/2.jpg", "/services/app/3.jpg"],
         importance: [
             { icon: <Smartphone size={15} />, header: "Mobile-First", description: "Reach customers directly on their smartphones." },
