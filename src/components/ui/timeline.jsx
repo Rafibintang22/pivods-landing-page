@@ -26,7 +26,7 @@ export const Timeline = ({ data, title, description }) => {
 		<div className="w-full font-sans" ref={containerRef}>
 			<div className="w-full flex flex-col items-center justify-center text-center pt-40">
 				<span className="bg-primary/20 text-primary h-fit w-fit px-4 py-2 rounded-full text-[15px] backdrop-blur-md">
-					What Pivods Stand For
+					Work Process
 				</span>
 				<h2 className="text-4xl max-md:text-md font-bold my-6 text-white dark:text-gray-100">
 					Our Steps to Bring Your,{" "}
