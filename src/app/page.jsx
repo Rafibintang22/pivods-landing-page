@@ -71,7 +71,7 @@ export const metadata = {
 		images: ["https://pivods.com/og-image.png"],
 	},
 };
-import { Nav, WhatsAppButton } from "@/components/global";
+import { Nav, WhatsAppButton, FadeInSection } from "@/components/global";
 import {
 	Portfolio,
 	Hero,
@@ -89,7 +89,9 @@ export default function Home() {
 			<Nav />
 			<main>
 				<Hero />
-				<About />
+				<FadeInSection>
+					<About />
+				</FadeInSection>
 				<BusinessStruggle />
 				<CtaBanner
 					ctaText={"Ready to Break Those Challenges?"}
