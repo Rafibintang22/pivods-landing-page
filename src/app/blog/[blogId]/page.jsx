@@ -138,7 +138,7 @@ function RelatedPosts({ currentId, category }) {
 
 export default function BlogPostDetail({ params }) {
     const { blogId } = use(params);
-    const blog = blogData.find((item) => item.Id === Number(blogId));
+    const blog = blogData.find((item) => item.Id === blogId);
 
     if (!blog) {
         return <h1 className="text-center text-2xl py-20">Blog not found</h1>;
