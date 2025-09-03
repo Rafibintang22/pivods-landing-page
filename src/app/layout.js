@@ -1,6 +1,7 @@
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Providers from "./providers";
+import Script from "next/script";
 
 const montserrat = Montserrat({
     subsets: ["latin"],
@@ -17,6 +18,19 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en" suppressHydrationWarning>
             <head>
+                {/* Google Analytics */}
+                <Script
+                    src="https://www.googletagmanager.com/gtag/js?id=G-BC17J4SX84"
+                    strategy="afterInteractive"
+                />
+                <Script id="google-analytics" strategy="afterInteractive">
+                    {`
+                        window.dataLayer = window.dataLayer || [];
+                        function gtag(){dataLayer.push(arguments);}
+                        gtag('js', new Date());
+                        gtag('config', 'G-BC17J4SX84');
+                    `}
+                </Script>
                 <link rel="icon" href="/favicon.ico" sizes="48" />
                 <link
                     rel="icon"

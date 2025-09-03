@@ -1,6 +1,6 @@
 const portofolioData = [
     {
-        Id: 1,
+        Id: "multilink-trans-indonesia",
         category: { label: "Company Profile", value: "company-profile" },
         title: "Multilink Trans Indonesia",
         description:
@@ -26,7 +26,7 @@ const portofolioData = [
     },
 
     {
-        Id: 2,
+        Id: "flood-control-management-system-sipbanja-2",
         category: { label: "Information System", value: "information-system" },
         title: "Flood Control Management System (SIPBANJA 2)",
         description:
@@ -52,7 +52,7 @@ const portofolioData = [
     },
 
     {
-        Id: 3,
+        Id: "flood-control-management-system-sipbanja-1",
         category: { label: "Mobile Application", value: "mobile-app" },
         title: "Flood Control Management System (SIPBANJA 1)",
         description:
@@ -85,7 +85,7 @@ const portofolioData = [
     },
 
     {
-        Id: 4,
+        Id: "s-rusun-smart-apartments-app",
         category: { label: "Mobile Application", value: "mobile-app" },
         title: "S-Rusun: Smart Apartments App",
         description:
@@ -121,7 +121,7 @@ const portofolioData = [
     },
 
     {
-        Id: 5,
+        Id: "rusunami-file-management-system",
         category: { label: "Information System", value: "information-system" },
         title: "Rusunami File Management System",
         description:
@@ -147,7 +147,7 @@ const portofolioData = [
     },
 
     {
-        Id: 6,
+        Id: "smart-integrated-scale-system-ksip-agro",
         category: { label: "IoT Development", value: "iot-dev" },
         title: "Smart Integrated Scale System (KSIP Agro)",
         description:
@@ -178,7 +178,7 @@ const portofolioData = [
     },
 
     {
-        Id: 7,
+        Id: "safety-multipurpose-box",
         category: { label: "IoT Development", value: "iot-dev" },
         title: "Safety Multipurpose Box",
         description:

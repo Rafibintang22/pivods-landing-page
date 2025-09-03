@@ -76,7 +76,7 @@ function PortofolioContent({ content }) {
 
 export default function PortofolioPostDetail({ params }) {
     const { portofolioId } = use(params);
-    const portofolio = portofolioData.find((item) => item.Id === Number(portofolioId));
+    const portofolio = portofolioData.find((item) => item.Id === portofolioId);
 
     if (!portofolio) {
         return <h1 className="text-center text-2xl py-20">Portofolio not found</h1>;
