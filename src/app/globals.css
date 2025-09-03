@@ -1,4 +1,6 @@
 @import "tailwindcss";
+/* agar selalu dark */
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
     --background: #000000;
@@ -87,7 +89,7 @@ body {
     font-family: var(--font-sans);
     font-size: var(--text-xs);
     overflow-x: hidden !important;
-    width: 100vw !important;
+    width: 100%; /* ubah dari 100vw */
 }
 
 .container {

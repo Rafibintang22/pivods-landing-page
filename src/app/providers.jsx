@@ -15,7 +15,7 @@ function Providers({ children }) {
     }
 
     return (
-        <ThemeProvider attribute="class" defaultTheme="dark">
+        <ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark">
             {children}
         </ThemeProvider>
     );
