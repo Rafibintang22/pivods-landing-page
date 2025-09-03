@@ -64,14 +64,8 @@ function PortofolioContent({ content }) {
                     <div>
                         <h1 className="text-sm font-bold mb-3">Technologies</h1>
                         <ul className="list-disc pl-6 space-y-1 text-xs text-gray-800 dark:text-gray-200">
-                            <li>Figma</li>
-                            <li>HTML 5</li>
-                            <li>CSS 3</li>
-                            <li>jQuery</li>
-                            <li>WordPress</li>
-                            <li>WooCommerce</li>
-                            <li>PHP</li>
-                            <li>MySQL</li>
+                            {content.technologies &&
+                                content.technologies.map((item, i) => <li key={i}>{item}</li>)}
                         </ul>
                     </div>
                 </div>

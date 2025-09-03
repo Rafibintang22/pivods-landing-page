@@ -3,8 +3,51 @@
 import { Button } from "@/components/global";
 import { BackgroundGradient } from "../ui/background-gradient";
 import { layoutStyles } from "@/app/style";
+import useAlert from "@/lib/alertStore";
 
 export default function FreeConsultation() {
+    const { isLoading, setIsLoading, setCondition } = useAlert();
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsLoading(true);
+
+        try {
+            const res = await fetch("/api/send-consultation", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    name: e.target.name.value,
+                    email: e.target.email.value,
+                    phone: e.target.phone.value,
+                    company: e.target.company.value,
+                    message: e.target.message.value,
+                }),
+            });
+
+            const data = await res.json();
+
+            if (res.ok && data.success) {
+                setCondition(
+                    "SUCCESS",
+                    "Consultation sent successfully!",
+                    "Our team will contact you shortly."
+                );
+                e.target.reset(); // reset form setelah berhasil
+            } else {
+                setCondition(
+                    "FAILED",
+                    "Failed to send consultation",
+                    data.message || "Please try again later."
+                );
+            }
+        } catch (error) {
+            setCondition("FAILED", "An unexpected error occurred", error.message);
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
     return (
         <section id="FreeConsultation" className="mt-24 py-12 lg:py-24">
             <div className={layoutStyles.container}>
@@ -34,7 +77,7 @@ export default function FreeConsultation() {
                         {/* Right form */}
                         <div className="w-full lg:w-7/12">
                             <form
-                                method="post"
+                                onSubmit={handleSubmit}
                                 id="home-contact-form"
                                 className="space-y-6 animate-fadeInUp"
                                 aria-label="Contact form"
@@ -128,9 +171,10 @@ export default function FreeConsultation() {
 
                                 <Button
                                     type="submit"
-                                    className="w-full md:w-auto px-6 py-2 rounded-md bg-primary text-white text-xs font-semibold shadow-md hover:shadow-lg hover:bg-primary/90 transition duration-300 ease-in-out"
+                                    disabled={isLoading}
+                                    className="w-full md:w-auto px-6 py-2 rounded-md bg-primary text-white text-xs font-semibold shadow-md hover:shadow-lg hover:bg-primary/90 transition duration-300 ease-in-out disabled:opacity-50"
                                 >
-                                    Send
+                                    {isLoading ? "Sending..." : "Send"}
                                 </Button>
                             </form>
                         </div>

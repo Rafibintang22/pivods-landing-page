@@ -4,7 +4,7 @@ const portofolioData = [
         category: { label: "Company Profile", value: "company-profile" },
         title: "Multilink Trans Indonesia",
         description:
-            "A sleek and responsive company profile website built to strengthen brand presence and highlight corporate services.",
+            "PT Multilink Trans Indonesia is a leading logistics and forwarding company that specializes in providing comprehensive supply chain solutions tailored to meet the diverse needs of its clientele.",
         summary:
             "A sleek and responsive company profile website built to strengthen brand presence and highlight corporate services.",
         header: {
@@ -14,24 +14,25 @@ const portofolioData = [
         details: [
             {
                 type: "paragraph",
-                text: "We developed a modern company profile website with a clean UI/UX that reflects the client’s brand values. The site is optimized for performance and accessibility, making it easier for potential clients to connect with Multilink Trans Indonesia.",
+                text: "PT Multilink Trans Indonesia is a leading logistics and forwarding company that specializes in providing comprehensive supply chain solutions tailored to meet the diverse needs of its clientele. With a commitment to excellence, Multilink Trans Indonesia offers a wide range of services including international freight forwarding, customs clearance, and warehousing.",
             },
             {
                 type: "paragraph",
-                text: "The website highlights company achievements, services, and client testimonials in a visually appealing and structured way.",
+                text: "We developed company profile website through modern design and user-friendly interface, which reflect the brand’s values and commitment to quality service. The site is meticulously crafted to highlight PT Multilink Trans Indonesia's key achievements, range of services, and positive client testimonials in a visually appealing and structured manner. By prioritizing performance and accessibility, the website ensures that potential clients can effortlessly navigate through the information they need. Additionally, the site features an innovative tracking tool that allows clients to monitor their shipments in real time, providing transparency and building trust in the shipping process. This combination of features facilitates a more efficient connection between the company and its clients, fostering business relationships and enhancing overall engagement. With functionalities that showcase the company's successes and detailed service offerings, the website serves as an essential tool for both existing and prospective clients, reinforcing Multilink's position as a trusted partner in logistics and forwarding.",
             },
         ],
         button: { label: "Visit Site", link: "https://multilink.co.id" },
+        technologies: ["Figma", "HTML5", "CSS3", "WordPress", "PHP", "MySQL"],
     },
 
     {
         Id: 2,
         category: { label: "Information System", value: "information-system" },
-        title: "Flood Control Management System (SIPBANJA-2)",
+        title: "Flood Control Management System (SIPBANJA 2)",
         description:
             "An integrated flood monitoring and control information system with GIS support to improve disaster preparedness and response.",
         summary:
-            "An integrated flood monitoring and control information system with GIS support to improve disaster preparedness and response.",
+            "A powerful and intuitive flood monitoring system combining real-time data, geospatial mapping, and predictive analytics to enhance disaster management capabilities.",
         header: {
             src: "/portofolio/sipbanja2-map-mockup.png",
             alt: "Flood Control Management Information System",
@@ -39,24 +40,25 @@ const portofolioData = [
         details: [
             {
                 type: "paragraph",
-                text: "We built a flood control management system that combines geospatial visualization with real-time monitoring of water levels.",
+                text: "PT. Dinamaritama Konsultan Rekayasa is a civil engineering consultancy specializing in planning and supervision for infrastructure projects, particularly in water resources and transportation. Certified under multiple construction service classifications such as RE102, RE103, RE202, and RK002, the company serves both private and public sector clients across Indonesia. In collaboration with Indonesia's Ministry of Public Works and Housing (PUPR), particularly the Citarum River Basin Authority (BBWS Citarum), the firm commissioned the development of SIPBANJA-2—a flood control management system designed to support better disaster preparedness and response.",
             },
             {
                 type: "paragraph",
-                text: "The system supports decision-making for authorities by providing predictive analysis, automated alerts, and comprehensive reporting features.",
+                text: "SIPBANJA-2 is a web-based information system developed using React.js for the frontend, Express.js for the backend, Leaflet.js for interactive GIS-based mapping, and Tailwind CSS for modern and responsive styling. Building on the earlier SIPBANJA-1 module, which focused on internal management, this enhanced version provides real-time water level monitoring, geospatial visualization of flood-prone areas, automated early warning alerts, and historical data reporting. The system equips operational teams and government stakeholders with the tools needed to make quick, informed decisions during flood events, while also contributing to long-term disaster mitigation and infrastructure planning.",
             },
         ],
         button: null,
+        technologies: ["React.js", "Express.js", "Leaflet.js", "Tailwind CSS", "Node.js"],
     },
 
     {
         Id: 3,
         category: { label: "Mobile Application", value: "mobile-app" },
-        title: "Flood Control Management System (SIPBANJA-1)",
+        title: "Flood Control Management System (SIPBANJA 1)",
         description:
             "A mobile app for flood monitoring and community reporting system, empowering citizens and field officers with real-time information.",
         summary:
-            "A mobile app for flood monitoring and community reporting system, empowering citizens and field officers with real-time information.",
+            "A mobile-first flood monitoring and reporting application designed to support field officers in documenting river conditions with location-tagged images and structured data.",
         header: {
             src: "/portofolio/sipbanja1-dash-mockup.png",
             alt: "Flood Control Mobile Application",
@@ -64,24 +66,32 @@ const portofolioData = [
         details: [
             {
                 type: "paragraph",
-                text: "We designed and developed a mobile app version of the flood monitoring system to empower citizens and field officers to report real-time flood conditions and receive early warnings.",
+                text: "SIPBANJA-1 is a mobile application developed as part of the broader SIPBANJA system, aimed at improving flood monitoring and field data collection. This application is specifically designed for use by field officers from PT. Dinamaritama Konsultan Rekayasa and related government agencies. It enables officers to record river conditions directly from the field using structured forms, along with automated geolocation tagging. This ensures that every report is linked to its exact GPS coordinates, providing accurate spatial data for analysis and decision-making.",
             },
             {
                 type: "paragraph",
-                text: "The mobile app extends the web-based SIPBANJA system by offering mobile-first usability for faster reporting and access to critical information.",
+                text: "One of the key features of the app is its ability to capture and upload images that are automatically tagged with the officer’s current location. These visual records, combined with condition reports and timestamp data, help create a reliable, real-time stream of flood-related information. The mobile-first interface ensures fast, intuitive use in the field—even in challenging environments. SIPBANJA-1 serves as a critical operational tool for improving situational awareness, supporting early warning systems, and enhancing coordination between central management and field teams.",
             },
         ],
         button: null,
+        technologies: [
+            "React Native",
+            "Express.js",
+            "Node.js",
+            "REST API",
+            "Tailwind CSS",
+            "Google Maps API",
+        ],
     },
 
     {
         Id: 4,
         category: { label: "Mobile Application", value: "mobile-app" },
-        title: "Smart Apartments App",
+        title: "S-Rusun: Smart Apartments App",
         description:
-            "A smart living mobile application designed for Rusunami residents, integrating digital services and IoT device control.",
+            "A smart living mobile application designed for Rusunami residents, integrating digital services, IoT device control, and smart utilities management.",
         summary:
-            "A smart living mobile application designed for Rusunami residents, integrating digital services and IoT device control.",
+            "An integrated smart housing management platform with IoT, utility analytics, and AI-driven safety features, deployed in public housing projects across multiple Indonesian cities.",
         header: {
             src: "/portofolio/srusun-app-dash-mockup.png",
             alt: "Smart Apartments Mobile App",
@@ -89,14 +99,25 @@ const portofolioData = [
         details: [
             {
                 type: "paragraph",
-                text: "The Smart Apartments app provides residents with an all-in-one platform to manage their apartment living. It includes features such as online bill payments, maintenance requests, community announcements, and IoT device control.",
+                text: "S-Rusun is a smart housing mobile application developed to enhance the quality of living for residents in Rusunami (low-cost public housing) by integrating digital services and intelligent infrastructure management. The app provides a seamless interface for daily needs, including utility bill payments, maintenance requests, resident communications, and smart home device control. It is part of a larger smart management ecosystem that supports operational efficiency and improved quality of life for public housing communities.",
             },
             {
                 type: "paragraph",
-                text: "The app is designed to improve convenience, security, and connectivity for residents by digitizing apartment services and integrating smart home devices.",
+                text: "Deployed in several major cities including Bandung, Surabaya, Semarang, and the new capital city IKN, S-Rusun combines IoT devices, centralized data warehousing, and big data analytics to manage residential environments effectively. Key features include real-time utility usage monitoring, gas leak detection systems, CCTV-based security analytics, and AI/ML-powered anomaly detection to identify utility fraud or potential hazards. The system aims to enhance convenience, safety, and sustainability in public housing through digital transformation and green technology infrastructure.",
             },
         ],
         button: null,
+        technologies: [
+            "React",
+            "React Native",
+            "Express.js",
+            "Node.js",
+            "IoT Integration",
+            "MongoDB",
+            "Tailwind CSS",
+            "AI/ML",
+            "Big Data",
+        ],
     },
 
     {
@@ -114,14 +135,15 @@ const portofolioData = [
         details: [
             {
                 type: "paragraph",
-                text: "This system digitizes document management for Rusunami residents and administrators, allowing secure storage, retrieval, and sharing of important documents such as ownership certificates, payment receipts, and community regulations.",
+                text: "Rusunami The Jarrdin Cihampelas is a public housing complex designed to provide affordable and sustainable residential units for middle to low-income families in Bandung. The development focuses on creating a comfortable living environment with integrated community facilities and services to support residents’ daily needs.",
             },
             {
                 type: "paragraph",
-                text: "The solution streamlines administrative work and provides residents with easier access to their digital documents anytime, anywhere.",
+                text: "To enhance administrative efficiency and improve residents’ access to important documents, we developed the Rusunami File Management System. This digital platform enables secure storage, easy retrieval, and sharing of essential paperwork such as ownership certificates, payment receipts, and community regulations, simplifying the management process for both residents and administrators.",
             },
         ],
         button: null,
+        technologies: ["React.js", "Node.js", "MySQL", "Express.js", "Tailwind CSS"],
     },
 
     {
@@ -136,14 +158,23 @@ const portofolioData = [
         details: [
             {
                 type: "paragraph",
-                text: "We developed the Smart Integrated Scale (SIS) for KSIP Agro, automating the weighing and receiving process by integrating digital scales, cameras, and ERP synchronization.",
+                text: "PT KSIP Solusi Mandiri (KSIP Agro) is an Indonesian exporter of fresh exotic fruits and vegetables established in 2013. The company, certified with ISO 22000 in 2024, is committed to delivering high-quality natural produce to the global market. One of its most critical operations is the goods receiving process, where products are weighed, adjusted for pallet weight, sorted into export-grade quality, and recorded for returns. Previously, this process was manual, often leading to inefficiencies, inaccuracies, and limited transparency with suppliers.",
             },
             {
                 type: "paragraph",
-                text: "The system captures product weight and images, prints barcode labels, and updates Odoo ERP in real-time to reduce manual errors and ensure transparency with suppliers.",
+                text: "To address these challenges, we developed the Smart Integrated Scale (SIS) system, an IoT-based solution that automates weighing and receiving by integrating digital scales, cameras, barcode printers, and Odoo ERP synchronization. Each weighing station is equipped with Raspberry Pi and ESP32 microcontrollers, connected to touchscreens and label printers, ensuring reliable offline operation with automatic data synchronization to the cloud and ERP system. The system captures product weight and images, generates barcodes, and provides real-time updates to suppliers via WhatsApp, significantly improving efficiency, accuracy, and transparency in KSIP Agro’s operations.",
             },
         ],
         button: null,
+        technologies: [
+            "Raspberry Pi",
+            "ESP32",
+            "Odoo ERP",
+            "Node.js",
+            "MySQL",
+            "Express.js",
+            "WhatsApp API",
+        ],
     },
 
     {
@@ -154,18 +185,28 @@ const portofolioData = [
             "A smart safety box with emergency tools, a public display, and multifunctional surveillance for public facilities.",
         summary:
             "A smart safety box with emergency tools, a public display, and multifunctional surveillance for public facilities.",
-        header: { src: "/portofolio/bandara.jpg", alt: "Safety Multipurpose Box" },
+        header: { src: "/portofolio/bandara.jpeg", alt: "Safety Multipurpose Box" },
         details: [
             {
                 type: "paragraph",
-                text: "Developed for PT Angkasa Pura, the Safety Multipurpose Box integrates emergency response tools such as AEDs and gas masks with a Raspberry Pi-powered display for public information and advertising.",
+                text: "PT Angkasa Pura, as one of Indonesia’s leading airport operators, continuously seeks to improve passenger safety and public facility management. To support this initiative, the Safety Multipurpose Box was introduced as an integrated solution combining essential emergency equipment and modern digital technology. This system aims to ensure that safety resources such as gas masks, oxygen masks, AED defibrillators, and fire extinguishers are readily accessible in critical situations while also serving as an innovative information hub for airport visitors.",
             },
             {
                 type: "paragraph",
-                text: "The system includes surveillance integration with CCTV and real-time image processing to enhance safety management.",
+                text: "The Safety Multipurpose Box is equipped with emergency response tools including AEDs, standard gas masks, and oxygen masks, paired with a Raspberry Pi-powered display that delivers real-time public information and advertisements. In addition, the system is integrated with CCTV cameras and real-time image processing to enhance surveillance, situational awareness, and safety management. By combining hardware, IoT components, and digital communication in one unit, the project provides PT Angkasa Pura with a multifunctional and scalable safety infrastructure for modern public facilities.",
             },
         ],
         button: null,
+        technologies: [
+            "Raspberry Pi",
+            "IoT Sensors",
+            "CCTV Integration",
+            "Real-Time Image Processing",
+            "React.js",
+            "Node.js",
+            "Express.js",
+            "MySQL",
+        ],
     },
 ];
 
