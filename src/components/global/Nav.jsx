@@ -7,6 +7,7 @@ import { faBars, faMoon, faSun, faTimes } from "@fortawesome/free-solid-svg-icon
 import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
 import { Button } from ".";
+import { layoutStyles } from "@/app/style";
 
 function Nav({ className }) {
     const [isScrolled, setIsScrolled] = useState(false);
@@ -31,7 +32,9 @@ function Nav({ className }) {
 
     return (
         <nav
-            className={`fixed top-0 left-0 z-50 flex justify-between items-center mx-auto max-lg:px-[30px] px-[120px] min-3xl:px-[20rem] py-6 w-full transition-colors duration-300
+            className={`fixed top-0 left-0 z-50 flex justify-between items-center ${
+                layoutStyles.container
+            } py-6 transition-colors duration-300
             ${
                 isScrolled
                     ? "bg-white text-gray-900 dark:bg-black/50 dark:text-gray-100 dark:backdrop-blur-md shadow"

@@ -80,7 +80,7 @@
 
 .animate-marquee {
     display: flex;
-    width: max-content;
+    width: 100%;
     animation: marquee 20s linear infinite;
 }
 
@@ -89,7 +89,7 @@ body {
     font-family: var(--font-sans);
     font-size: var(--text-xs);
     overflow-x: hidden !important;
-    width: 100%; /* ubah dari 100vw */
+    width: 100% !important;
 }
 
 .container {
