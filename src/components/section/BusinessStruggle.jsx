@@ -84,7 +84,7 @@ function BusinessStruggle() {
                         </div>
                     </div>
                     <div className="w-1/2 h-full max-lg:w-full max-lg:pl-0 grid grid-cols-2 gap-x-5 gap-y-10 relative max-md:grid-cols-2 max-lg:grid-cols-3 max-lg:gap-x-3 max-lg:gap-y-5">
-                        <div className="absolute top-0 left-0 w-[800px] h-[800px] rounded-full bg-primary/30 blur-[200px] -z-10"></div>
+                        <div className="absolute top-0 left-0 w-[80vw] max-w-[800px] aspect-square rounded-full bg-primary/30 blur-[25vw] -z-10"></div>
                         {/* Pain Point 1 */}
                         {problems.map((problem, index) => (
                             <div key={index} className="flex flex-col items-start gap-3 text-left">

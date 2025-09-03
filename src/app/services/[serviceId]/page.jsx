@@ -109,7 +109,7 @@ export default async function DetailServices({ params }) {
                                 </div>
                             </div>
                             <div className="max-w-[590px] mt-[40px] relative">
-                                <div className="absolute top-0 left-0 w-[800px] h-[800px] rounded-full bg-primary/30 blur-[200px] -z-10"></div>
+                                <div className="absolute top-0 left-0 w-[80vw] max-w-[800px] aspect-square rounded-full bg-primary/30 blur-[25vw] -z-10"></div>
 
                                 <h3 className="font-medium font-base-font text-white text-[35px] leading-[130.5%] mb-[20px] md:text-[25px]">
                                     Our <span className="text-primary">Capabilities</span>

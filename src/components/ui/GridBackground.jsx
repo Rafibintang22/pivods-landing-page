@@ -34,8 +34,31 @@ export function GridBackground({ children, className, ...props }) {
             <div className="pointer-events-none absolute inset-0 -z-10 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_3%,black)] dark:bg-black"></div>
 
             {/* Background Glow */}
-            <div className="absolute top-0 left-0 w-[800px] h-[800px] rounded-full bg-primary/30 blur-[200px] -z-10"></div>
-            <div className="absolute bottom-0 right-0 w-[600px] h-[600px] rounded-full bg-primary/20 blur-[180px] -z-10"></div>
+            {/* Blur atas */}
+            <div
+                className="
+                absolute top-25 md:top-0
+                left-1/2 -translate-x-1/2   /* center di mobile */
+                w-[70vw] max-w-[800px] aspect-square 
+                rounded-full bg-primary/30 
+                blur-[20vw] sm:blur-[150px] 
+                -z-10
+                sm:left-0 sm:translate-x-0  /* reset di layar >= sm */
+            "
+            ></div>
+
+            {/* Blur bawah */}
+            <div
+                className="
+                absolute bottom-60 md:bottom-0 
+                left-1/2 -translate-x-1/2   /* center di mobile */
+                w-[70vw] max-w-[600px] aspect-square 
+                rounded-full bg-primary/20 
+                blur-[15vw] sm:blur-[120px] 
+                -z-10
+                sm:right-0 sm:left-auto sm:translate-x-0  /* reset di layar >= sm */
+            "
+            ></div>
 
             {/* Content */}
             <div className="h-full w-full z-20">{children}</div>

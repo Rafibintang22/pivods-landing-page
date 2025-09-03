@@ -56,9 +56,8 @@ function Nav({ className }) {
                 {menu.map((item, i) => {
                     const isActive = pathname === item.href || pathname.startsWith(`${item.href}/`);
                     return (
-                        <div key={i} className="relative group cursor-pointer">
-                            <Link
-                                href={item.href}
+                        <Link key={i} href={item.href} className="relative group cursor-pointer">
+                            <div
                                 className={`transition-colors duration-300 font-medium ${
                                     isActive
                                         ? "text-black dark:text-white group-hover:text-black dark:group-hover:text-white"
@@ -66,7 +65,7 @@ function Nav({ className }) {
                                 }`}
                             >
                                 {item.name}
-                            </Link>
+                            </div>
                             <span
                                 className="
                             absolute left-0 -bottom-1 h-[1px] w-full
@@ -76,7 +75,7 @@ function Nav({ className }) {
                             transition-transform duration-300
                             "
                             />
-                        </div>
+                        </Link>
                     );
                 })}
             </div>
