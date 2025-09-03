@@ -3,7 +3,6 @@ import React, { useRef, useState } from "react";
 import { useMotionValueEvent, useScroll, motion } from "motion/react";
 import { GlowingEffect } from "./glowing-effect";
 import Link from "next/link";
-import { Button } from "../global";
 import { ArrowUpRight } from "lucide-react";
 export const StickyScroll = ({ content, contentClassName }) => {
 	const [activeCard, setActiveCard] = useState(0);
