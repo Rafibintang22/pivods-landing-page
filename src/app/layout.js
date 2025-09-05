@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
                         gtag('config', 'G-BC17J4SX84');
                     `}
                 </Script>
-                {/* <link rel="icon" href="/favicon.ico" sizes="48" />
+                <link rel="icon" href="/favicon.ico" sizes="48" />
                 <link
                     rel="icon"
                     href="/icon?<generated>"
@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
                     href="/app-icon?<generated>"
                     type="image/<generated>"
                     sizes="<generated>"
-                /> */}
+                />
             </head>
             <body className={`${montserrat.variable} antialiased bg-foreground dark:bg-background`}>
                 <Providers>{children}</Providers>
