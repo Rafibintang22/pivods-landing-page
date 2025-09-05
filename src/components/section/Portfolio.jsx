@@ -49,7 +49,7 @@ export default function Portfolio() {
             <BackgroundBeamsWithCollision>
                 <div className="absolute top-0 z-10 max-w-3xl mx-auto">
                     <h2 className="text-4xl font-bold mb-6 text-black dark:text-white">
-                        Portfolio <span className="text-primary">Us</span>
+                        <span className="text-primary">Our</span> Portfolio
                     </h2>
                     <p className="text-gray-500 dark:text-gray-400 leading-relaxed">
                         Pivods also known as Pioneer Inovasi Digital is a software house product.

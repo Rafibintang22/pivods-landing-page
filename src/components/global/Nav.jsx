@@ -87,7 +87,7 @@ function Nav({ className }) {
                     target="_blank"
                     rel="noopener noreferrer"
                     className={
-                        "hidden md:block px-3 py-3 text-xs bg-primary/20 rounded-xl hover:bg-primary/80 text-primary hover:text-white shadow-lg transition flex items-center gap-2"
+                        "hidden md:block px-3 py-3 text-xs font-medium bg-primary/20 rounded-xl hover:bg-primary/80 text-primary hover:text-white shadow-lg transition flex items-center gap-2"
                     }
                 >
                     Free Consultation Here
@@ -165,7 +165,7 @@ function Nav({ className }) {
                             target="_blank"
                             rel="noopener noreferrer"
                             className={
-                                "px-6 py-3 text-xs bg-primary/20 rounded-xl hover:bg-primary/80 text-primary hover:text-white shadow-lg transition flex items-center gap-2"
+                                "px-6 py-3 text-xs font-medium bg-primary/20 rounded-xl hover:bg-primary/80 text-primary hover:text-white shadow-lg transition flex items-center gap-2"
                             }
                         >
                             Free Consultation Here

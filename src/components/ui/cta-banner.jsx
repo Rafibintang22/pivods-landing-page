@@ -13,11 +13,14 @@ function CtaBanner({ ctaText, smallText }) {
                 </p>
             </div>
             <div className="w-1/4 flex justify-end max-lg:w-full max-lg:justify-center">
-                <button className="px-6 py-3 text-[20px] max-lg:text-[13px] bg-primary/20 rounded-xl hover:bg-primary/80 text-primary shadow-lg transition flex items-center gap-2">
+                <a
+                    href="https://wa.me/6281382189198"
+                    className="px-6 py-3 text-[20px] max-lg:text-[13px] bg-primary/20 rounded-xl hover:bg-primary/80 text-primary shadow-lg transition flex items-center gap-2"
+                >
                     <PhoneCall className="max-lg:hidden" size={25} />
                     <PhoneCall className="min-lg:hidden" size={15} />
                     Contact Us
-                </button>
+                </a>
             </div>
         </div>
     );

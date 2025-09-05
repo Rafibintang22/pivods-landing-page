@@ -4,6 +4,7 @@ import Image from "next/image";
 import { pivodsServices } from "@/lib/detailservice";
 import { notFound } from "next/navigation";
 import { Footer } from "@/components/section";
+import Link from "next/link";
 
 export default async function DetailServices({ params }) {
     const { serviceId } = await params;
@@ -234,7 +235,7 @@ export default async function DetailServices({ params }) {
                                     </h3>
                                     <ul>
                                         <li className="text-[16px] mt-[15px] group transition-all pt-[6px] relative">
-                                            <a
+                                            <Link
                                                 href="service-single.html"
                                                 className="text-[#D8D8D8] group hover:text-primary text-[16px] font-semibold block transition-all"
                                             >
@@ -242,10 +243,10 @@ export default async function DetailServices({ params }) {
                                                 <span className="inline-block w-[30px] h-[30px] leading-[30px] bg-[#2c2c2c] hover:bg-primary transition-all absolute right-0 text-center rounded-[50%] text-[18px]">
                                                     5
                                                 </span>
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li className="text-[16px] mt-[15px] group transition-all pt-[6px] relative">
-                                            <a
+                                            <Link
                                                 href="service-single.html"
                                                 className="text-[#D8D8D8] group hover:text-primary text-[16px] font-semibold block transition-all"
                                             >
@@ -253,21 +254,21 @@ export default async function DetailServices({ params }) {
                                                 <span className="inline-block w-[30px] h-[30px] leading-[30px] bg-[#2c2c2c] hover:bg-primary transition-all absolute right-0 text-center rounded-[50%] text-[18px]">
                                                     7
                                                 </span>
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li className="text-[16px] mt-[15px] group transition-all pt-[6px] relative">
-                                            <a
+                                            <Link
                                                 href="service-single.html"
                                                 className="text-[#D8D8D8] group hover:text-primary text-[16px] font-semibold block transition-all"
                                             >
-                                                Softwere Development{" "}
+                                                Software Development{" "}
                                                 <span className="inline-block w-[30px] h-[30px] leading-[30px] bg-[#2c2c2c] hover:bg-primary transition-all absolute right-0 text-center rounded-[50%] text-[18px]">
                                                     3
                                                 </span>
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li className="text-[16px] mt-[15px] group transition-all pt-[6px] relative">
-                                            <a
+                                            <Link
                                                 href="service-single.html"
                                                 className="text-[#D8D8D8] group hover:text-primary text-[16px] font-semibold block transition-all"
                                             >
@@ -275,10 +276,10 @@ export default async function DetailServices({ params }) {
                                                 <span className="inline-block w-[30px] h-[30px] leading-[30px] bg-[#2c2c2c] absolute right-0 text-center rounded-[50%] text-[18px]">
                                                     8
                                                 </span>
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li className="text-[16px] mt-[15px] group transition-all pt-[6px] relative">
-                                            <a
+                                            <Link
                                                 href="service-single.html"
                                                 className="text-[#D8D8D8] group hover:text-primary text-[16px] font-semibold block transition-all"
                                             >
@@ -286,10 +287,10 @@ export default async function DetailServices({ params }) {
                                                 <span className="inline-block w-[30px] h-[30px] leading-[30px] bg-[#2c2c2c] hover:bg-primary transition-all absolute right-0 text-center rounded-[50%] text-[18px]">
                                                     6
                                                 </span>
-                                            </a>
+                                            </Link>
                                         </li>
                                         <li className="text-[16px] mt-[15px] group transition-all pt-[6px] relative">
-                                            <a
+                                            <Link
                                                 href="service-single.html"
                                                 className="text-[#D8D8D8] group hover:text-primary text-[16px] font-semibold block transition-all"
                                             >
@@ -297,7 +298,7 @@ export default async function DetailServices({ params }) {
                                                 <span className="inline-block w-[30px] h-[30px] leading-[30px] bg-[#2c2c2c] hover:bg-primary transition-all absolute right-0 text-center rounded-[50%] text-[18px]">
                                                     2
                                                 </span>
-                                            </a>
+                                            </Link>
                                         </li>
                                     </ul>
                                 </div>
